@@ -4,14 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chenyang Zhao – Imperial College London</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-family: system-ui, -apple-system, sans-serif; font-size: 16px; color: #111; line-height: 1.5; }
+    body { background: #fff; padding: 1rem; }
+
+    /* Layout */
+    .wrapper { max-width: 600px; margin: 0 auto; }
+    header, main, footer { margin-bottom: 2rem; }
+
+    /* Typography */
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; text-align: center; }
+    h2 { font-size: 1.25rem; margin-bottom: 0.75rem; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
+    p, ul { margin-bottom: 1rem; }
+    ul { list-style: none; }
+    ul li + li { margin-top: 0.5rem; }
+    blockquote { font-style: italic; color: #555; margin: 1rem 0; text-align: center; }
+
+    /* Navigation */
+    .nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1rem; }
+    .nav a { font-size: 0.875rem; padding: 0.25rem 0.5rem; color: inherit; text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { font-size: 0.875rem; text-align: center; color: #555; }
+  </style>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <img src="images/profile.jpg" alt="Chenyang Zhao" class="profile">
       <h1>Chenyang Zhao</h1>
-      <p>MSci Mathematics, Imperial College London</p>
+      <p>Imperial College London</p>
+      <blockquote>“We don’t choose Mathematics as our profession, it chooses us.” — Yuri Manin</blockquote>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -25,7 +50,7 @@
     <main>
       <section id="about">
         <h2>About</h2>
-        <p>I am an MSci Mathematics student at Imperial College London interested in computational Algebraic Geometry, such as singularities of algebraic curves and surfaces.</p>
+        <p>I am an MSci Mathematics student at Imperial College London specializing in computational Algebraic Geometry.</p>
       </section>
 
       <section id="research">
@@ -33,20 +58,20 @@
         <ul>
           <li>
             <strong>GameTheory Package (Nov 2024–May 2025)</strong><br>
-            Supervisor: <a href="https://www.irem-portakal.de/" target="_blank" rel="noopener">Dr Irem Portakal</a>, Max Planck Institute<br>
+            Supervisor: <a href="https://www.irem-portakal.de/" target="_blank" rel="noopener">Dr Irem Portakal</a>, Max Planck Institute, Leipzig<br>
             Developing the GameTheory package in Macaulay2, focusing on totally mixed Nash equilibria.<br>
             <a href="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html" target="_blank" rel="noopener">Package Documentation</a> · <a href="https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences" target="_blank" rel="noopener">Workshop</a>
           </li>
           <li>
             <strong>UROP: Algebraic Geometry (Jun 2024–Sep 2024)</strong><br>
             Supervisor: <a href="https://profiles.imperial.ac.uk/s.feyzbakhsh" target="_blank" rel="noopener">Dr Soheyla Feyzbakhsh</a>, Imperial College London<br>
-            Investigated elliptic curves over finite fields and cryptographic applications.  
+            Investigated elliptic curves over finite fields and cryptographic applications.<br>
             <a href="https://github.com/chenyangzhaoicl/Algebraic-Geometry-and-Cryptography/blob/main/Basic_ECC.pdf" target="_blank" rel="noopener">Notes</a>
           </li>
           <li>
-            <strong>M2R: Homogeneous Spaces (May 2024–Jun 2024)</strong><br>
+            <strong>M2R: Dynamics on Homogeneous Spaces (May 2024–Jun 2024)</strong><br>
             Supervisor: <a href="https://profiles.imperial.ac.uk/m.lawn" target="_blank" rel="noopener">Dr Marie-Amelie Lawn</a>, Imperial College London<br>
-            Presented Ratner’s Theorem proofs and visualized Margulis’ Theorem using Python.  
+            Presented Ratner’s Theorem proofs and visualized Margulis’ Theorem using Python.<br>
             <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation/blob/main/Dynamics_on_Homogeneous_Spaces__Ratner_s_Theorems_and_Applications.pdf" target="_blank" rel="noopener">Paper</a>
           </li>
         </ul>
@@ -56,8 +81,7 @@
         <h2>Talks</h2>
         <ul>
           <li>
-            <strong>TMT 2025:</strong> Algebraic Systems in Game Theory & Macaulay2 Package Development  
-            (<a href="https://sites.google.com/view/ima-tmt-2025/programme" target="_blank" rel="noopener">Link</a>) – Online, Mar 2025
+            <strong>TMT 2025:</strong> Algebraic Systems in Game Theory & Macaulay2 Package Development (<a href="https://sites.google.com/view/ima-tmt-2025/programme" target="_blank" rel="noopener">Link</a>) – Online, Mar 2025
           </li>
           <li>
             <strong>Undergraduate Colloquium:</strong> Algebraic Systems in Game Theory – Imperial College London, Jan 2025
@@ -70,11 +94,9 @@
 
       <section id="skills">
         <h2>Skills</h2>
-        <p>
-          <strong>Programming:</strong> Python · Julia · Macaulay2 · R · LaTeX · Git · HTML · CSS<br>
-          <strong>Software:</strong> Mathematica · Emacs · VS Code · Excel · PowerPoint<br>
-          <strong>Languages:</strong> English (Professional) · Mandarin (Native) · French · Turkish · Shanghainese
-        </p>
+        <p><strong>Programming:</strong> Python · Julia · Macaulay2 · R · LaTeX · Git · HTML · CSS</p>
+        <p><strong>Software:</strong> Mathematica · Emacs · VS Code · Excel · PowerPoint</p>
+        <p><strong>Languages:</strong> English (Professional) · Mandarin (Native) · French · Turkish · Shanghainese</p>
       </section>
 
       <section id="other">
@@ -84,12 +106,10 @@
 
       <section id="contact">
         <h2>Contact</h2>
-        <p>
-          Email: <a href="mailto:cz2922@ic.ac.uk">cz2922@ic.ac.uk</a><br>
-          GitHub: <a href="https://github.com/chenyangzhaoicl" target="_blank" rel="noopener">github.com/chenyangzhaoicl</a><br>
-          LinkedIn: <a href="https://www.linkedin.com/in/czicl/" target="_blank" rel="noopener">linkedin.com/in/czicl</a><br>
-          Website: <a href="http://www.felixzhao.com" target="_blank" rel="noopener">felixzhao.com</a>
-        </p>
+        <p>Email: <a href="mailto:cz2922@ic.ac.uk">cz2922@ic.ac.uk</a><br>
+           GitHub: <a href="https://github.com/chenyangzhaoicl" target="_blank" rel="noopener">github.com/chenyangzhaoicl</a><br>
+           LinkedIn: <a href="https://www.linkedin.com/in/czicl/" target="_blank" rel="noopener">linkedin.com/in/czicl</a><br>
+           Website: <a href="http://www.felixzhao.com" target="_blank" rel="noopener">felixzhao.com</a></p>
       </section>
     </main>
 
