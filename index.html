@@ -1,107 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chenyang Zhao - Imperial College London</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chenyang Zhao – Imperial College London</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="images/profile.jpg" alt="Chenyang Zhao" style="width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto;">
-            <h1>Chenyang Zhao</h1>
-            <p>Imperial College London</p>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#talks">Talks</a>
-                <a href="#skills">Skills</a>
-                <a href="#other">Other</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    I am a MSci Mathematics student at Imperial College London. I am interested in Algebraic Geometry from a computational aspect.
-                </p>
-            </section>
-
-            <section id="research">
-                <h2>Research</h2>
-                <ul>
-                    <li>
-                        <strong>GameTheory Package Development</strong> (Nov 2024 – May 2025)<br>
-                        Supervisor: <a href="https://www.irem-portakal.de/" target="_blank">Dr. Irem Portakal</a>, Max Planck Institute<br>
-                        Developing the GameTheory package in Macaulay2, focusing on computing totally mixed Nash equilibria using payoff tensors. Contributed to the <a href="https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences" target="_blank">Macaulay2 in the Sciences</a> workshop.
-                    </li>
-                    <li>
-                        <strong>UROP: Algebraic Geometry</strong> (Jun 2024 – Sep 2024)<br>
-                        Supervisor: <a href="https://profiles.imperial.ac.uk/s.feyzbakhsh" target="_blank">Dr. Soheyla Feyzbakhsh</a>, Imperial College London<br>
-                        Investigated the arithmetic properties of elliptic curves over finite fields, such as Hasse's theorem, and some of their cryptographic applications.<br>
-                        <a href="https://github.com/chenyangzhaoicl/Algebraic-Geometry-and-Cryptography/blob/main/Basic_ECC.pdf" target="_blank">Notes</a>
-                    </li>
-                    <li>
-                        <strong>M2R: Dynamics on Homogeneous Spaces: Ratner's Theorem and application in Diophantine approximation</strong> (May 2024 – Jun 2024)<br>
-                        Supervisor: <a href="https://profiles.imperial.ac.uk/m.lawn" target="_blank">Dr. Marie-Amelie Lawn</a>, Imperial College London<br>
-                        Presented proofs from Ratner's Measure Classification Theorem to the Equidistribution Theorem. Visualized Margulis' Theorem quantitatively using Python.<br>
-                        <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation/blob/main/Dynamics_on_Homogeneous_Spaces__Ratner_s_Theorems_and_Applications.pdf" target="_blank">Paper</a>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="talks">
-                <h2>Talks</h2>
-                <ul>
-                    <li>
-                        <strong>TMT 2025: Algebraic Systems in Game Theory & Macaulay2 Package Development</strong><br>
-                        <a href=https://sites.google.com/view/ima-tmt-2025/programme target="_blank">Link</a>
-                        Online, Mar 2025
-                    </li>
-                    <li>
-                        <strong>Algebraic Systems in Game Theory & Macaulay2 Package Development</strong><br>
-                        Undergraduate Colloquium, Imperial College London, Jan 2025
-                    </li>
-                    <li>
-                        <strong>3 Minute UROP Talks</strong><br>
-                        Algebraic Geometry and Cryptography, Imperial College London, Oct 2024
-                    </li>
-                </ul>
-            </section>
-
-            <section id="skills">
-                <h2>Skills</h2>
-                <p>
-                    <strong>Programming:</strong> Python, Julia, Macaulay2, R, LaTeX, Git, GitHub, HTML, css<br>
-                    <strong>Software:</strong> Mathematica, Emacs, VScode, Excel, PowerPoint<br>
-                    <strong>Languages:</strong> English(Professional), Mandarin(Native), and I'm also able to speak French, Turkish and Shanghainese at a decent level.
-                </p>
-            </section>
-
-            <section id="other">
-                <h2>Other</h2>
-                <p>
-                    <strong>Backpacking:</strong> I have solo backpacked across 40+ countries among Asia, Europe, and Africa, exploring diverse cultures and expanding my worldview. I'm also into outdoor sports and plan to climb more mountains both on Earth and in Mathematics.
-                </p>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>
-                    Email: <a href="mailto:cz2922@ic.ac.uk">cz2922@ic.ac.uk</a><br>
-                    GitHub: <a href="https://github.com/chenyangzhaoicl" target="_blank">github.com/chenyangzhaoicl</a><br>
-                    LinkedIn: <a href="https://www.linkedin.com/in/czicl/" target="_blank">linkedin.com/in/czicl</a><br>
-                    Website: <a href="http://www.felixzhao.com" target="_blank">www.felixzhao.com</a>
-                </p>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2025 Chenyang Zhao</p>
-        </footer>
-    </div>
+  <div class="wrapper">
+    <header>
+      <img src="images/profile.jpg" alt="Chenyang Zhao" class="profile">
+      <h1>Chenyang Zhao</h1>
+      <p>MSci Mathematics, Imperial College London</p>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#skills">Skills</a>
+        <a href="#other">Other</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>I am a Mathematics student at Imperial College London specializing in computational Algebraic Geometry.</p>
+      </section>
+      <section id="research">
+        <h2>Research</h2>
+        <ul>
+          <li><strong>GameTheory Package (Nov 2024–May 2025)</strong><br>Developing GameTheory in Macaulay2 under Dr Irem Portakal, MPI.</li>
+          <li><strong>UROP: Algebraic Geometry (Jun 2024–Sep 2024)</strong><br>Studied elliptic curves over finite fields with Dr Soheyla Feyzbakhsh.</li>
+          <li><strong>M2R: Homogeneous Spaces (May 2024–Jun 2024)</strong><br>Visualized Ratner's Theorem with Python under Dr Marie-Amelie Lawn.</li>
+        </ul>
+      </section>
+      <section id="talks">
+        <h2>Talks</h2>
+        <ul>
+          <li><strong>TMT 2025:</strong> Algebraic Systems in Game Theory – Online, Mar 2025</li>
+          <li><strong>Undergraduate Colloquium:</strong> Jan 2025, Imperial College London</li>
+          <li><strong>3 Minute UROP:</strong> Oct 2024, Imperial College London</li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>Python · Julia · Macaulay2 · R · LaTeX · Git · HTML · CSS</p>
+        <p>English (Proficient) · Mandarin (Native) · French, Turkish, Shanghainese</p>
+      </section>
+      <section id="other">
+        <h2>Other</h2>
+        <p>Solo backpacked across 40+ countries. Outdoor sports enthusiast.</p>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:cz2922@ic.ac.uk">cz2922@ic.ac.uk</a><br>
+          GitHub: <a href="https://github.com/chenyangzhaoicl" target="_blank">github.com/chenyangzhaoicl</a><br>
+          LinkedIn: <a href="https://linkedin.com/in/czicl/" target="_blank">linkedin.com/in/czicl</a>
+        </p>
+      </section>
+    </main>
+    <footer>© 2025 Chenyang Zhao</footer>
+  </div>
 </body>
 </html>
