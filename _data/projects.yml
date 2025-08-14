@@ -1,0 +1,31 @@
+- title: "Implicit representation of algebraic rational 3D surfaces by means of syzygy-based methods"
+  description: >
+    Studied the implicit representation of rational algebraic curves and surfaces via syzygy-based matrices. 
+    Studied several tools from algebraic geometry (e.g. basics on algebraic schemes, blowup maps), commutative algebra (e.g. Rees and Symmetric algebras).
+    Implement the result into Macaulay2 code and develop a Macaulay2 Package for syzygy-based matrices of algebraic curves and surfaces.
+    Look at the open problem of cases for which the formalism does not allow to conclude the validity of the method of moving quadrics.
+  year: "Apr 2025 – June 2025"
+  institution: "Inria"
+
+- title: "GameTheory Package Development in Macaulay2"
+  description: >
+    Developed the GameTheory package in Macaulay2 to compute totally mixed Nash equilibria using payoff tensors. Contributed to the <a href="https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences">Workshop</a> and development of the package. 
+    Here is the official Macaulay2 <a href="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html">documentation</a> of the package. 
+  year: "Nov. 2024 – July 2025"
+  tags: ["Applied Algebraic Geometry", "Macaulay2", "Computational Algebraic Geometry"]
+
+- title: "Undergraduate Research Opportunity Programme (UROP)"
+  description: >
+    Studied basic Algebraic Geometry and ECC using algebraic (arithmetic) geometry. Studied elliptic curves over finite fields and key results from the angle of cryptography. 
+    <a href="https://github.com/chenyangzhaoicl/Algebraic-Geometry-and-Cryptography/blob/main/Basic_ECC.pdf">My hand written notes.</a>
+  year: "July 2024 – Sep 2024"
+  institution: "Imperial College London"
+
+- title: "Second-Year Group Research Project: Dynamics on Homogeneous Spaces: Ratner's Theorems and Applications"
+  description: >
+    Supervised by <a href="https://profiles.imperial.ac.uk/m.lawn">Dr Marie-Amelie Lawn</a>. 
+    Proved Ratner's Measure Classification Theorem and applied it to Margulis' Theorem, creating Python visualisations for ergodic flows and quantitative results. 
+    <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation">See visualisations here.</a> Wrote key sections of the report and created code-based visualisations. 
+    <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation/blob/main/Dynamics_on_Homogeneous_Spaces__Ratner_s_Theorems_and_Applications.pdf">See the report here</a>.
+  year: "May 2024 – June 2024"
+  institution: "Imperial College London"

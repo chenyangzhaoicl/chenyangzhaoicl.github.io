@@ -1,0 +1,28 @@
+title: Chenyang Zhao
+name: Chenyang Zhao
+position: MSci Imperial College London | Inria Intern
+email: cz2922@ic.ac.uk
+
+description: >-
+  I am a final year MSci student in Mathematics at [Imperial College London](https://www.imperial.ac.uk/). I am also a research intern of [AROMATH team](https://team.inria.fr/aromath/team-members/) at [Inria](https://www.inria.fr/en/inria-centre-universite-cote-azur).
+
+  My research interests lie in applied and computational algebraic geometry. Recently I'm working on implicity representation of algebraic curves and surfaces with my supervisor [Laurent Busé](https://www-sop.inria.fr/members/Laurent.Buse/index.html).
+
+baseurl: "" # for GitHub Pages
+url: "https://chenyangzhaoicl.github.io"
+
+twitter_username: ChenyangZh61334
+github_username: chenyangzhaoicl
+google_scholar: _2HOwMIAAAAJ&hl
+last_updated: August 14, 2025
+
+# ✅ 使用官方推荐方式设置主题
+remote_theme: jekyll/minima
+
+plugins:
+  - jekyll-feed
+
+sass:
+  style: compact
+
+

@@ -1,1 +1,0 @@
-This is the code of my website, I had a fancy one but I copied someone's template. Now I want to learn to do it myself and make it more minimalist and academic :)

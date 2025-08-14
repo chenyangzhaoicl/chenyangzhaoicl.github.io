@@ -1,0 +1,15 @@
+- id: agt
+  title: "The GameTheory package for Macaulay2"
+  venue: arXiv, 2025
+  description: "We describe the GameTheory package version 1.0 for computing equilibria in game theory available since version 1.25.05 of Macaulay2. We briefly explain the four equilibrium notions, Nash, correlated, dependency, and conditional independence, and demonstrate their implementation in the package with examples."
+  arxiv: 2507.16755
+  image: agt.png
+  authors:
+    - Erin Connelly
+    - Vincenzo Galgano
+    - Zhuang He
+    - Giacomo Maletto
+    - Elke Neuhaus
+    - Irem Portakal
+    - Hannah Tillmann-Morris
+    - Chenyang Zhao

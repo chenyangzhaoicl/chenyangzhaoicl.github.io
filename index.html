@@ -1,119 +1,206 @@
+---
+layout: null
+---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chenyang Zhao – Imperial College London</title>
-  <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-family: system-ui, -apple-system, sans-serif; font-size: 16px; color: #111; line-height: 1.5; }
-    body { background: #fff; padding: 1rem; }
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-    /* Layout */
-    .wrapper { max-width: 600px; margin: 0 auto; }
-    header, main, footer { margin-bottom: 2rem; }
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{ site.name }}</title>
 
-    /* Typography */
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; text-align: center; }
-    h2 { font-size: 1.25rem; margin-bottom: 0.75rem; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
-    p, ul { margin-bottom: 1rem; }
-    ul { list-style: none; }
-    ul li + li { margin-top: 0.5rem; }
-    blockquote { font-style: italic; color: #555; margin: 1rem 0; text-align: center; }
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
 
-    /* Navigation */
-    .nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1rem; }
-    .nav a { font-size: 0.875rem; padding: 0.25rem 0.5rem; color: inherit; text-decoration: none; }
-    .nav a:hover { text-decoration: underline; }
-
-    /* Footer */
-    footer { font-size: 0.875rem; text-align: center; color: #555; }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+  <script src="{{ '/js/index.js' | relative_url }}"></script>
 </head>
+
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Chenyang Zhao</h1>
-      <p>Imperial College London</p>
-      <blockquote>“We don’t choose Mathematics as our profession, it chooses us.” — Yuri Manin</blockquote>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#talks">Talks</a>
-        <a href="#skills">Skills</a>
-        <a href="#other">Other</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>I am an MSci Mathematics student at Imperial College London specializing in computational Algebraic Geometry.</p>
-      </section>
+  <section class="hero">
+    <div class="hero-body container is-max-desktop">
+      <div class="columns is-vcentered">
 
-      <section id="research">
-        <h2>Research</h2>
-        <ul>
-          <li>
-            <strong>GameTheory Package (Nov 2024–May 2025)</strong><br>
-            Supervisor: <a href="https://www.irem-portakal.de/" target="_blank" rel="noopener">Dr Irem Portakal</a>, Max Planck Institute, Leipzig<br>
-            Developing the GameTheory package in Macaulay2, focusing on totally mixed Nash equilibria.<br>
-            <a href="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html" target="_blank" rel="noopener">Package Documentation</a> · <a href="https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences" target="_blank" rel="noopener">Workshop</a>
-          </li>
-          <li>
-            <strong>UROP: Algebraic Geometry (Jun 2024–Sep 2024)</strong><br>
-            Supervisor: <a href="https://profiles.imperial.ac.uk/s.feyzbakhsh" target="_blank" rel="noopener">Dr Soheyla Feyzbakhsh</a>, Imperial College London<br>
-            Investigated elliptic curves over finite fields and cryptographic applications.<br>
-            <a href="https://github.com/chenyangzhaoicl/Algebraic-Geometry-and-Cryptography/blob/main/Basic_ECC.pdf" target="_blank" rel="noopener">Notes</a>
-          </li>
-          <li>
-            <strong>M2R: Dynamics on Homogeneous Spaces (May 2024–Jun 2024)</strong><br>
-            Supervisor: <a href="https://profiles.imperial.ac.uk/m.lawn" target="_blank" rel="noopener">Dr Marie-Amelie Lawn</a>, Imperial College London<br>
-            Presented Ratner’s Theorem proofs and visualized Margulis’ Theorem using Python.<br>
-            <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation/blob/main/Dynamics_on_Homogeneous_Spaces__Ratner_s_Theorems_and_Applications.pdf" target="_blank" rel="noopener">Paper</a>
-          </li>
-        </ul>
-      </section>
+        <div class="column is-4">
+          <div class="portrait">
+            <img src="{{ '/images/portrait.jpg' | relative_url }}" />
+          </div>
+        </div>
 
-      <section id="talks">
-        <h2>Talks</h2>
-        <ul>
-          <li>
-            <strong>TMT 2025:</strong> Algebraic Geometry in Game Theory & Macaulay2 Package Development (<a href="https://sites.google.com/view/ima-tmt-2025/programme" target="_blank" rel="noopener">Link</a>) – Online, Mar 2025
-          </li>
-          <li>
-            <strong>Undergraduate Colloquium:</strong> Algebraic Geometry in Game Theory – Imperial College London, Jan 2025
-          </li>
-          <li>
-            <strong>3-Minute UROP Talks:</strong> Algebraic Geometry and Cryptography – Imperial College London, Oct 2024
-          </li>
-        </ul>
-      </section>
+        <div class="column">
+          <h1 class="title">
+            <b>{{ site.name }}</b>
+          </h1>
+          <div class="content has-text-justified">
+            {{ site.description | markdownify }}
+            <div class="buttons">
+              <a class="external-link button is-light" href="cv.html">
+                <span class="icon"><i class="fas fa-file"></i></span>
+                <span>CV</span>
+              </a>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <p><strong>Programming:</strong> Python · Julia · Macaulay2 · R · LaTeX · Git · HTML · CSS</p>
-        <p><strong>Software:</strong> Mathematica · Emacs · VS Code · Excel · PowerPoint</p>
-        <p><strong>Languages:</strong> English (Professional) · Mandarin (Native) · French · Turkish · Shanghainese</p>
-      </section>
+              <a class="external-link button is-light"
+                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+                <span class="icon"><i class="ai ai-google-scholar"></i></span>
+                <span>Scholar</span>
+              </a>
 
-      <section id="other">
-        <h2>Other</h2>
-        <p>Solo backpacked across 40+ countries. Outdoor sports enthusiast with plans to climb more mountains—both on Earth and in mathematics.</p>
-      </section>
+              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Github</span>
+              </a>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:cz2922@ic.ac.uk">cz2922@ic.ac.uk</a><br>
-           GitHub: <a href="https://github.com/chenyangzhaoicl" target="_blank" rel="noopener">github.com/chenyangzhaoicl</a><br>
-           LinkedIn: <a href="https://www.linkedin.com/in/czicl/" target="_blank" rel="noopener">linkedin.com/in/czicl</a><br>
-           Website: <a href="http://www.felixzhao.com" target="_blank" rel="noopener">felixzhao.com</a></p>
-      </section>
-    </main>
+              <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+                <span>Twitter</span>
+              </a>
+            </div>
 
-    <footer>© 2025 Chenyang Zhao</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News. -->
+  <div class="hr">
+    <div class="container">
+      <hr>
+    </div>
   </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!--<h2 class="title is-3">News</h2>
+      <div class="content">
+        <ul>
+          {% for news in site.data.news %}
+          <li>
+            <b>{{ news.date }}</b>: {{ news.description | markdownify | remove: '<p>' | remove: '</p>' }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>-->
+
+      <h2 class="title is-3">Publications</h2>
+
+      {% for publication in site.data.publications %}
+      <div class="publication-block columns">
+
+        <div class="column is-2">
+          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
+            {% if publication.image_mouseover contains "mp4" %}
+            <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
+              <source src="./images/{{ publication.image_mouseover }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            {% endif %}
+            <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content">
+            {% if publication.project_page %}
+              <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
+            {% else %}
+            <h3 class="publication-title">{{ publication.title }}</h3>
+            {% endif %}
+            <div class="publication-authors">
+              {% for author_id in publication.authors %}
+              {% if site.data.authors[author_id] %}
+                {% assign author = site.data.authors[author_id] %}
+                <span class="author-block {% if author.is_me %}author-me{% endif %}">
+                  {% if author.is_me %}
+                  {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
+                  endif %}
+                  {% else %}
+                  <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
+                    }}</a>{% if forloop.last == false %},{% endif %}
+                  {% endif %}
+                </span>
+              {% else %}
+                {% assign author = author_id %}
+                <span class="author-block">
+                  {{ author }}{% if forloop.last == false %},{%endif %}
+                </span>
+              {% endif %}
+              {% endfor %}
+            </div>
+            <div class="publication-venue">
+              <span>{{ publication.venue }}</span>
+              {% for award in publication.awards %}
+                <span class="publication-venue-emph">{{ award }}<span>
+              {% endfor %}
+            </div>
+            <p class="publication-description">{{ publication.description }}</p>
+            <!-- Publication Links. -->
+            <div class="publication-links buttons field has-addons">
+              {% if publication.project_page %}
+              <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
+                <span class="icon"><i class="fas fa-globe-asia"></i></span>
+                <span>Project Page</span>
+              </a>
+              {% endif %}
+              {% if publication.arxiv %}
+              <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>PDF</span>
+              </a>
+              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ publication.arxiv }}">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+              {% endif %}
+              {% if publication.github %}
+              <a class="external-link button is-small is-ghost" href="https://github.com/{{ publication.github }}">
+                <span class="icon"><i class="fa fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+              {% endif %}
+            </div>
+            <!--/ Publication Links. -->
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content footer-links has-text-centered">
+        <a href="mailto:{{ site.email }}">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="external-link" href="https://github.com/{{ site.github_username }}">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The template for this page was borrowed from <a href="https://github.com/keunhong/keunhong.github.io">this website</a>.
+              <br>Last updated: {{ site.last_updated }}.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
