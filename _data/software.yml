@@ -1,0 +1,7 @@
+- name: GameTheory.m2
+  version: "1.0"
+  year: 2025
+  description: Game Theory is a Macaulay2 package for several equilibrium concepts in game theory. It constructs the algebro-geometric and combinatorial models for Nash, correlated, dependency, and conditional independence equilibria.
+  repo: https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages
+  docs: https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html
+  link: https://macaulay2.com/

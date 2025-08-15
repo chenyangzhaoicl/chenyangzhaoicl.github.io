@@ -1,0 +1,11 @@
+- name: Tomorrow's Mathematicians Today 2025
+  role: Speaker
+  location: Greenwich University, London, UK
+  dates: Mar 2025
+  link: https://sites.google.com/view/ima-tmt-2025
+
+- name: Macaulay2 in the Sciences
+  role: Participant
+  location: MPI MiS, Leipzig, Germany
+  dates: Nov 2024
+  link: https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences

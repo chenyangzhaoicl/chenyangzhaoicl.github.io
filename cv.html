@@ -104,6 +104,55 @@ layout: null
         </div>
         {% endfor %}
 
+        <h2>Conferences</h2>
+        {% assign confs = site.data.conferences | reverse %}
+        {% for conf in confs %}
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <b>{{ conf.name }}</b>{% if conf.location %} — {{ conf.location }}{% endif %}
+            {% if conf.role %}<br /><i>{{ conf.role }}</i>{% endif %}
+            {% if conf.description %}<br />{{ conf.description }}{% endif %}
+            {% if conf.link %}<br /><a href="{{ conf.link }}" target="_blank">[Website]</a>{% endif %}
+          </div>
+          <div class="column is-one-fifths has-text-right">
+            {{ conf.dates }}
+          </div>
+        </div>
+        {% endfor %}
+        
+        <h2>Talks</h2>
+        {% assign talks = site.data.talks | reverse %}
+        {% for talk in talks %}
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <b>{{ talk.title }}</b><br />
+            {{ talk.venue }}{% if talk.location %}, {{ talk.location }}{% endif %}
+            {% if talk.description %}<br />{{ talk.description }}{% endif %}
+            {% if talk.link %}<br /><a href="{{ talk.link }}" target="_blank">[Slides/Recording]</a>{% endif %}
+          </div>
+          <div class="column is-one-fifths has-text-right">
+            {{ talk.date }}
+          </div>
+        </div>
+        {% endfor %}
+        
+        <h2>Software</h2>
+        {% assign software = site.data.software | reverse %}
+        {% for s in software %}
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <b>{{ s.name }}</b>{% if s.version %} v{{ s.version }}{% endif %}<br />
+            {{ s.description }}
+            {% if s.repo %}<br /><a href="{{ s.repo }}" target="_blank">[Code]</a>{% endif %}
+            {% if s.docs %} <a href="{{ s.docs }}" target="_blank">[Docs]</a>{% endif %}
+            {% if s.link %} <a href="{{ s.link }}" target="_blank">[Website]</a>{% endif %}
+          </div>
+          <div class="column is-one-fifths has-text-right">
+            {{ s.year }}
+          </div>
+        </div>
+        {% endfor %}
+        
         <h2>Projects</h2>
         
         {% for project in site.data.projects %}
@@ -120,7 +169,6 @@ layout: null
           </div>
         </div>
         {% endfor %}
-
 
         <h2>Publications</h2>
 
