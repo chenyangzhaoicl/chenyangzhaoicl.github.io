@@ -88,6 +88,22 @@ layout: null
         </div>
         {% endfor %}
 
+        <h2>Employment</h2>
+
+        {% for job in site.data.employment %}
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <b>{{ job.company }}</b><br />
+            {{ job.description }}
+          </div>
+          <div class="column is-one-fifths has-text-right">
+            {{ job.dates }}
+            <br />
+            {{ job.location }}
+          </div>
+        </div>
+        {% endfor %}
+
         <h2>Projects</h2>
         
         {% for project in site.data.projects %}
