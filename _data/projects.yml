@@ -1,10 +1,17 @@
-- title: "Implicit representation of algebraic rational 3D surfaces by means of syzygy-based methods"
+- title: "Master thesis: Deformation theory of algebraic schemes with applications to moduli problems."
+  description: >
+    Supervised by <a href="http://mattbooth.info/">Dr Matt Booth</a>. 
+    Topics I went through as "Basics": Scheme theory, functor of points, moduli problems, deformation theory (functors), hilbert scheme (of points). I'm currently looking at 1) some local behaviors of some special points on (projective) hilbert scheme and 2) deformation of hilbert scheme of points on toric varieties and some invariant behaviours.
+  year: "Oct 2025 – June 2026"
+  institution: "Imperial College London"
+
+- title: "Implicit representation of algebraic curves and surfaces via syzygy-based methods"
   description: >
     Studied the implicit representation of rational algebraic curves and surfaces via syzygy-based matrices. 
     Studied several tools from algebraic geometry (e.g. basics on algebraic schemes, blowup maps), commutative algebra (e.g. Rees and Symmetric algebras).
     Implement the result into Macaulay2 code and develop a Macaulay2 Package for syzygy-based matrices of algebraic curves and surfaces.
     Look at the open problem of cases for which the formalism does not allow to conclude the validity of the method of moving quadrics.
-  year: "Apr 2025 – June 2025"
+  year: "Jun 2025 – Sep 2025"
   institution: "Inria"
 
 - title: "GameTheory Package Development in Macaulay2"

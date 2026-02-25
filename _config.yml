@@ -1,20 +1,20 @@
 title: Chenyang Zhao
 name: Chenyang Zhao
-position: MSci Imperial College London | Inria Intern
+position: MSci Imperial College London
 email: cz2922@ic.ac.uk
 
 description: >-
-  I am a final year MSci student in Mathematics at [Imperial College London](https://www.imperial.ac.uk/). I am also a research intern of [AROMATH team](https://team.inria.fr/aromath/team-members/) at [Inria](https://www.inria.fr/en/inria-centre-universite-cote-azur).
+  I am a final year MSci student in Mathematics at [Imperial College London](https://www.imperial.ac.uk/). I am an ex-research intern of [AROMATH team](https://team.inria.fr/aromath/team-members/) at [Inria](https://www.inria.fr/en/inria-centre-universite-cote-azur).
 
-  My research interests lie in applied and computational algebraic geometry. Recently I'm working on implicit representation of algebraic curves and surfaces with my supervisor [Laurent Busé](https://www-sop.inria.fr/members/Laurent.Buse/index.html).
+  My research interests lie in algebraic geometry, the keywords of my research are deformation theory, hilbert scheme (of points), moduli problems and computational algebraic geometry. I am currently working on my master thesis under [Dr. Matt Booth](http://mattbooth.info/), which focuses on deformation of algebraic schemes and applications to moduli problems (including hilbert schemes of points on specific varieties). Previously I worked on implicit representation of algebraic curves and surfaces via syzygy-based matrices with my supervisor [Laurent Busé](https://www-sop.inria.fr/members/Laurent.Buse/index.html). I also contributed to the development of a [Macaulay2](https://macaulay2.com/) package on [GameTheory](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html).
 
 baseurl: "" # for GitHub Pages
 url: "https://felixzhao.com"
 
 twitter_username: ChenyangZh61334
 github_username: chenyangzhaoicl
-google_scholar: _2HOwMIAAAAJ&hl
-last_updated: August 14, 2025
+google_scholar: _2HOwMIAAAAJ
+last_updated: 25 February 2026
 
 # ✅ 使用官方推荐方式设置主题
 remote_theme: jekyll/minima
