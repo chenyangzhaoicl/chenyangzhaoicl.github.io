@@ -15,6 +15,7 @@ layout: null
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
   <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/css/young-diagram-playground.css' | relative_url }}" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
@@ -89,7 +90,7 @@ layout: null
         </ul>
       </div>-->
 
-      <h2 class="title is-3">Publications</h2>
+      <h2 class="title is-3" id="publications">Publications</h2>
 
       {% for publication in site.data.publications %}
       <div class="publication-block columns">
@@ -171,6 +172,41 @@ layout: null
         </div>
       </div>
       {% endfor %}
+
+      <section class="yd-preview-section" id="young-diagram-playground-preview">
+        <h2 class="title is-3">Interactive Playground</h2>
+        <div class="yd-preview-band">
+          <div class="yd-preview-copy">
+            <h3>Young diagrams and nested fixed points</h3>
+            <p>
+              A small software companion for the thesis: removable corners, addable monomial
+              generator directions, and the row-and-column shortening rule for tangent weights.
+            </p>
+            <a class="yd-preview-link" href="young-diagram-playground.html">
+              <span class="icon"><i class="fas fa-project-diagram"></i></span>
+              <span>Open Playground</span>
+            </a>
+          </div>
+          <div class="yd-preview-figure" aria-hidden="true">
+            <svg viewBox="0 0 360 250" role="img">
+              <g fill="#fff" stroke="#d4d6da">
+                <path d="M84 28h48v48H84zM132 28h48v48h-48zM180 28h48v48h-48zM228 28h48v48h-48zM276 28h48v48h-48z" />
+                <path d="M84 76h48v48H84zM132 76h48v48h-48zM180 76h48v48h-48zM228 76h48v48h-48zM276 76h48v48h-48z" />
+                <path d="M84 124h48v48H84zM132 124h48v48h-48zM180 124h48v48h-48zM228 124h48v48h-48zM276 124h48v48h-48z" />
+                <path d="M84 172h48v48H84zM132 172h48v48h-48zM180 172h48v48h-48zM228 172h48v48h-48zM276 172h48v48h-48z" />
+              </g>
+              <g fill="#fff" stroke="#151515" stroke-width="3">
+                <path d="M84 76h48v48H84zM84 124h48v48H84zM84 172h48v48H84zM132 124h48v48h-48zM132 172h48v48h-48zM180 172h48v48h-48zM228 172h48v48h-48z" />
+              </g>
+              <path d="M132 124h48v48h-48z" fill="#ffe0a3" stroke="#151515" stroke-width="3" />
+              <circle cx="156" cy="196" r="6" fill="#111" />
+              <path d="M156 100L252 196" fill="none" stroke="#717783" stroke-width="4" stroke-linecap="round" />
+              <path d="M156 148L252 196" fill="none" stroke="#d7674e" stroke-width="4" stroke-linecap="round" />
+              <path d="M252 196l-15-3 11-11z" fill="#d7674e" />
+            </svg>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
