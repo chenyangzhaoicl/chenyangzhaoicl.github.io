@@ -1,0 +1,24 @@
+- id: nested-hilbert-scheme
+  title: "Deformation Theory and Torus-Fixed Geometry of the Nested Hilbert Scheme of Points"
+  venue: arXiv, 2026
+  description: "Nous étudions le schéma de Hilbert emboîté de points du plan affine à l'aide de la théorie des déformations, des actions de tore et de la combinatoire des diagrammes de Young. Nous identifions les espaces tangents aux paires emboîtées, décrivons les points fixes par un tore par des partitions avec un coin amovible, obtenons la formule des poids tangents par une règle de raccourcissement des diagrammes de Young, et vérifions la formule par calcul dans Macaulay2."
+  arxiv: "2606.08120"
+  image: nested-hilbert-young-arrows.png
+  authors:
+    - Chenyang Zhao
+
+- id: agt
+  title: "The GameTheory package for Macaulay2"
+  venue: arXiv, 2025
+  description: "Nous présentons la version 1.0 du package GameTheory pour Macaulay2, consacré au calcul d'équilibres en théorie des jeux et disponible depuis la version 1.25.05 de Macaulay2. Nous expliquons brièvement quatre notions d'équilibre, Nash, corrélé, de dépendance et d'indépendance conditionnelle, puis nous illustrons leur implémentation dans le package par des exemples."
+  arxiv: "2507.16755"
+  image: agt.png
+  authors:
+    - Erin Connelly
+    - Vincenzo Galgano
+    - Zhuang He
+    - Giacomo Maletto
+    - Elke Neuhaus
+    - Irem Portakal
+    - Hannah Tillmann-Morris
+    - Chenyang Zhao

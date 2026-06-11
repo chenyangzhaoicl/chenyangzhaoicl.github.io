@@ -14,9 +14,85 @@
     cornerKey: "1,1",
     selectedKey: "1,0",
     tab: "fixed",
+    language: "en",
     showOrdinary: true,
     showNested: true
   };
+
+  var translations = {
+    en: {
+      youngAria: "Young diagram for lambda ",
+      selectedBox: "Selected box",
+      fixedPoint: "Fixed point",
+      fixedPointBody: "I<sub>&lambda;</sub> &sub; I<sub>&lambda;\\c</sub> with c = {corner} and m<sub>c</sub> = {monomial}",
+      monomialIdeals: "Monomial ideals",
+      quotientBasis: "Quotient basis",
+      socleDirections: "Socle directions",
+      generatorDirections: "Generator directions",
+      generatorBody: "Addable boxes of &mu; give the basis of I<sub>&mu;</sub>/(x,y)I<sub>&mu;</sub>.",
+      sameDatum: "Same datum",
+      sameDatumYes: "The selected corner c is also the addable box of &mu; that recovers &lambda;.",
+      sameDatumNo: "Choose another corner to recover &lambda; from &mu;.",
+      leftOfC: "s is left of c",
+      notLeftOfC: "not left of c",
+      belowC: "s is below c",
+      notBelowC: "not below c",
+      horizontal: "Horizontal",
+      vertical: "Vertical",
+      ordinary: "ordinary",
+      nested: "nested",
+      dividedByQ: "divided by q",
+      dividedByT: "divided by t",
+      unchanged: "unchanged",
+      rule: "Rule",
+      ruleBody: "Boxes left of c replace q<sup>a+1</sup>t<sup>-ell</sup> by q<sup>a</sup>t<sup>-ell</sup>. Boxes below c replace q<sup>-a</sup>t<sup>ell+1</sup> by q<sup>-a</sup>t<sup>ell</sup>.",
+      dimension: "Dimension",
+      dimensionBody: "There are two weights for each box in D(&lambda;), so dim T = 2|&lambda;| = {dimension}.",
+      shortened: "shortened",
+      same: "same"
+    },
+    fr: {
+      youngAria: "Diagramme de Young pour lambda ",
+      selectedBox: "Boîte choisie",
+      fixedPoint: "Point fixe",
+      fixedPointBody: "I<sub>&lambda;</sub> &sub; I<sub>&lambda;\\c</sub> avec c = {corner} et m<sub>c</sub> = {monomial}",
+      monomialIdeals: "Idéaux monomiaux",
+      quotientBasis: "Base du quotient",
+      socleDirections: "Directions du socle",
+      generatorDirections: "Directions de générateurs",
+      generatorBody: "Les boîtes ajoutables de &mu; donnent la base de I<sub>&mu;</sub>/(x,y)I<sub>&mu;</sub>.",
+      sameDatum: "Même donnée",
+      sameDatumYes: "Le coin choisi c est aussi la boîte ajoutable de &mu; qui reconstruit &lambda;.",
+      sameDatumNo: "Choisissez un autre coin pour reconstruire &lambda; à partir de &mu;.",
+      leftOfC: "s est à gauche de c",
+      notLeftOfC: "pas à gauche de c",
+      belowC: "s est sous c",
+      notBelowC: "pas sous c",
+      horizontal: "Horizontale",
+      vertical: "Verticale",
+      ordinary: "ordinaire",
+      nested: "emboîté",
+      dividedByQ: "divisé par q",
+      dividedByT: "divisé par t",
+      unchanged: "inchangé",
+      rule: "Règle",
+      ruleBody: "Les boîtes à gauche de c remplacent q<sup>a+1</sup>t<sup>-ell</sup> par q<sup>a</sup>t<sup>-ell</sup>. Les boîtes sous c remplacent q<sup>-a</sup>t<sup>ell+1</sup> par q<sup>-a</sup>t<sup>ell</sup>.",
+      dimension: "Dimension",
+      dimensionBody: "Il y a deux poids pour chaque boîte de D(&lambda;), donc dim T = 2|&lambda;| = {dimension}.",
+      shortened: "raccourci",
+      same: "identique"
+    }
+  };
+
+  function text(key) {
+    return (translations[state.language] && translations[state.language][key]) || translations.en[key] || key;
+  }
+
+  function interpolate(template, values) {
+    return template.replace(/\{([^}]+)\}/g, function (_, key) {
+      return values[key] || "";
+    });
+  }
 
   function clonePartition(partition) {
     return partition.slice();
@@ -311,7 +387,7 @@
       class: "yd-svg",
       viewBox: "0 0 " + width + " " + height,
       role: "img",
-      "aria-label": "Young diagram for lambda " + formatPartition(partition)
+      "aria-label": text("youngAria") + formatPartition(partition)
     });
 
     var defs = svgEl("defs");
@@ -462,18 +538,18 @@
     });
 
     byId("yd-fixed-data").innerHTML = [
-      ["Fixed point", "I<sub>&lambda;</sub> &sub; I<sub>&lambda;\\c</sub> with c = " + formatPoint(corner) + " and m<sub>c</sub> = " + formatMonomial(corner)],
-      ["Monomial ideals", "I<sub>&lambda;</sub> = " + formatIdeal(partition) + "<br>I<sub>&mu;</sub> = " + formatIdeal(mu)],
-      ["Quotient basis", '<div class="yd-pill-row">' + quotientBasis.map(function (box) {
+      [text("fixedPoint"), interpolate(text("fixedPointBody"), { corner: formatPoint(corner), monomial: formatMonomial(corner) })],
+      [text("monomialIdeals"), "I<sub>&lambda;</sub> = " + formatIdeal(partition) + "<br>I<sub>&mu;</sub> = " + formatIdeal(mu)],
+      [text("quotientBasis"), '<div class="yd-pill-row">' + quotientBasis.map(function (box) {
         return makePill(formatMonomial(box), samePoint(box, corner));
       }).join("") + "</div>"],
-      ["Socle directions", formatSpan(corners) + '<div class="yd-pill-row">' + corners.map(function (box) {
+      [text("socleDirections"), formatSpan(corners) + '<div class="yd-pill-row">' + corners.map(function (box) {
         return makePill(formatPoint(box) + " " + formatMonomial(box), samePoint(box, corner));
       }).join("") + "</div>"],
-      ["Generator directions", "Addable boxes of &mu; give the basis of I<sub>&mu;</sub>/(x,y)I<sub>&mu;</sub>." + '<div class="yd-pill-row">' + addables.map(function (box) {
+      [text("generatorDirections"), text("generatorBody") + '<div class="yd-pill-row">' + addables.map(function (box) {
         return makePill(formatPoint(box) + " " + formatMonomial(box), samePoint(box, corner));
       }).join("") + "</div>"],
-      ["Same datum", activeAddable ? "The selected corner c is also the addable box of &mu; that recovers &lambda;." : "Choose another corner to recover &lambda; from &mu;."]
+      [text("sameDatum"), activeAddable ? text("sameDatumYes") : text("sameDatumNo")]
     ].map(function (row) {
       return "<dt>" + row[0] + "</dt><dd>" + row[1] + "</dd>";
     }).join("");
@@ -492,22 +568,22 @@
       '<div class="yd-pill-row">' +
       makePill("a(s) = " + data.arm, false) +
       makePill("ell(s) = " + data.leg, false) +
-      makePill(data.leftOfCorner ? "s is left of c" : "not left of c", data.leftOfCorner) +
-      makePill(data.belowCorner ? "s is below c" : "not below c", data.belowCorner) +
+      makePill(data.leftOfCorner ? text("leftOfC") : text("notLeftOfC"), data.leftOfCorner) +
+      makePill(data.belowCorner ? text("belowC") : text("notBelowC"), data.belowCorner) +
       "</div>" +
       '<div class="yd-weight-big">' +
-      '<section class="yd-weight-card"><h3>Horizontal</h3>' +
-      '<div class="yd-weight-pair"><span>ordinary <strong>' + weightToHtml(data.ordinaryH) + "</strong></span>" +
-      '<span>nested <strong>' + weightToHtml(data.nestedH) + "</strong></span></div>" +
-      '<span class="yd-status ' + (hChanged ? "changed" : "same") + '">' + (hChanged ? "divided by q" : "unchanged") + "</span></section>" +
-      '<section class="yd-weight-card"><h3>Vertical</h3>' +
-      '<div class="yd-weight-pair"><span>ordinary <strong>' + weightToHtml(data.ordinaryV) + "</strong></span>" +
-      '<span>nested <strong>' + weightToHtml(data.nestedV) + "</strong></span></div>" +
-      '<span class="yd-status ' + (vChanged ? "changed" : "same") + '">' + (vChanged ? "divided by t" : "unchanged") + "</span></section>" +
+      '<section class="yd-weight-card"><h3>' + text("horizontal") + "</h3>" +
+      '<div class="yd-weight-pair"><span>' + text("ordinary") + " <strong>" + weightToHtml(data.ordinaryH) + "</strong></span>" +
+      '<span>' + text("nested") + " <strong>" + weightToHtml(data.nestedH) + "</strong></span></div>" +
+      '<span class="yd-status ' + (hChanged ? "changed" : "same") + '">' + (hChanged ? text("dividedByQ") : text("unchanged")) + "</span></section>" +
+      '<section class="yd-weight-card"><h3>' + text("vertical") + "</h3>" +
+      '<div class="yd-weight-pair"><span>' + text("ordinary") + " <strong>" + weightToHtml(data.ordinaryV) + "</strong></span>" +
+      '<span>' + text("nested") + " <strong>" + weightToHtml(data.nestedV) + "</strong></span></div>" +
+      '<span class="yd-status ' + (vChanged ? "changed" : "same") + '">' + (vChanged ? text("dividedByT") : text("unchanged")) + "</span></section>" +
       "</div>" +
       '<dl class="yd-definition-list">' +
-      "<dt>Rule</dt><dd>Boxes left of c replace q<sup>a+1</sup>t<sup>-ell</sup> by q<sup>a</sup>t<sup>-ell</sup>. Boxes below c replace q<sup>-a</sup>t<sup>ell+1</sup> by q<sup>-a</sup>t<sup>ell</sup>.</dd>" +
-      "<dt>Dimension</dt><dd>There are two weights for each box in D(&lambda;), so dim T = 2|&lambda;| = " + (2 * partitionSize(partition)) + ".</dd>" +
+      "<dt>" + text("rule") + "</dt><dd>" + text("ruleBody") + "</dd>" +
+      "<dt>" + text("dimension") + "</dt><dd>" + interpolate(text("dimensionBody"), { dimension: 2 * partitionSize(partition) }) + "</dd>" +
       "</dl></div>";
   }
 
@@ -524,7 +600,7 @@
         "<td>" + data.leg + "</td>" +
         "<td>" + weightToHtml(data.nestedH) + "</td>" +
         "<td>" + weightToHtml(data.nestedV) + "</td>" +
-        "<td>" + (changed ? "shortened" : "same") + "</td>" +
+        "<td>" + (changed ? text("shortened") : text("same")) + "</td>" +
         "</tr>";
     }).join("");
 
@@ -629,6 +705,7 @@
     if (!document.getElementById("young-diagram-playground")) {
       return;
     }
+    state.language = document.getElementById("young-diagram-playground").dataset.language || "en";
     bindEvents();
     render();
   }

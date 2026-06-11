@@ -2,7 +2,7 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr-FR">
 
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -26,9 +26,9 @@ layout: null
 
   <section class="hero">
     <div class="hero-body container is-max-desktop">
-      <div class="language-switcher" aria-label="Language switcher">
-        <span class="is-active">EN</span>
-        <a href="{{ '/fr/' | relative_url }}">FR</a>
+      <div class="language-switcher" aria-label="Sélecteur de langue">
+        <a href="{{ '/' | relative_url }}">EN</a>
+        <span class="is-active">FR</span>
       </div>
       <div class="columns is-vcentered">
 
@@ -43,7 +43,7 @@ layout: null
             <b>{{ site.name }}</b>
           </h1>
           <div class="content has-text-justified">
-            {{ site.description | markdownify }}
+            {{ site.data.site_fr.description | markdownify }}
             <div class="buttons">
               <a class="external-link button is-light" href="cv.html">
                 <span class="icon"><i class="fas fa-file"></i></span>
@@ -96,18 +96,18 @@ layout: null
 
       <h2 class="title is-3" id="publications">Publications</h2>
 
-      {% for publication in site.data.publications %}
+      {% for publication in site.data.publications_fr %}
       <div class="publication-block columns">
 
         <div class="column is-2">
           <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
             <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-              <source src="./images/{{ publication.image_mouseover }}" type="video/mp4">
-              Your browser does not support the video tag.
+              <source src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
+              Votre navigateur ne prend pas en charge la balise vidéo.
             </video>
             {% endif %}
-            <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" />
+            <img alt="{{ publication.title }}" src="{{ '/images/' | append: publication.image | relative_url }}" />
           </div>
         </div>
 
@@ -151,7 +151,7 @@ layout: null
               {% if publication.project_page %}
               <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                <span>Project Page</span>
+                <span>Page projet</span>
               </a>
               {% endif %}
               {% if publication.arxiv %}
@@ -178,17 +178,18 @@ layout: null
       {% endfor %}
 
       <section class="yd-preview-section" id="young-diagram-playground-preview">
-        <h2 class="title is-3">Interactive Playground</h2>
+        <h2 class="title is-3">Playground interactif</h2>
         <div class="yd-preview-band">
           <div class="yd-preview-copy">
-            <h3>Young diagrams and nested fixed points</h3>
+            <h3>Diagrammes de Young et points fixes emboîtés</h3>
             <p>
-              A small software companion for the thesis: removable corners, addable monomial
-              generator directions, and the row-and-column shortening rule for tangent weights.
+              Un petit compagnon logiciel pour le mémoire : coins amovibles, directions de
+              générateurs monomiaux ajoutables et règle de raccourcissement des lignes et colonnes
+              pour les poids tangents.
             </p>
             <a class="yd-preview-link" href="young-diagram-playground.html">
               <span class="icon"><i class="fas fa-project-diagram"></i></span>
-              <span>Open Playground</span>
+              <span>Ouvrir le playground</span>
             </a>
           </div>
           <div class="yd-preview-figure" aria-hidden="true">
@@ -232,8 +233,8 @@ layout: null
         <div class="column is-8">
           <div class="content">
             <p>
-              The template for this page was borrowed from <a href="https://github.com/keunhong/keunhong.github.io">this website</a>.
-              <br>Last updated: {{ site.last_updated }}.
+              Le modèle de cette page est adapté de <a href="https://github.com/keunhong/keunhong.github.io">ce site</a>.
+              <br>Dernière mise à jour : {{ site.last_updated }}.
             </p>
           </div>
         </div>

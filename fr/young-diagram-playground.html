@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Playground de diagrammes de Young | Chenyang Zhao</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="../css/bulma.min.css" rel="stylesheet">
+  <link href="../css/young-diagram-playground.css" rel="stylesheet">
+</head>
+
+<body class="playground-page">
+  <nav class="playground-nav" aria-label="Navigation principale">
+    <a class="nav-brand" href="index.html">Chenyang Zhao</a>
+    <div class="nav-links">
+      <a href="index.html#publications">Publications</a>
+      <a href="https://arxiv.org/abs/2606.08120">arXiv</a>
+      <a href="https://github.com/chenyangzhaoicl/master_thesis_nested_hilbert_scheme_deformation">Code du mémoire</a>
+      <span class="nav-language" aria-label="Sélecteur de langue">
+        <a href="../young-diagram-playground.html">EN</a>
+        <span class="is-active">FR</span>
+      </span>
+    </div>
+  </nav>
+
+  <main class="playground-shell">
+    <header class="playground-heading">
+      <div>
+        <p class="eyebrow">Schéma de Hilbert emboîté de points</p>
+        <h1>Playground de diagrammes de Young et points fixes par un tore</h1>
+      </div>
+      <p>
+        Un compagnon compact du mémoire : partitions, idéaux monomiaux, coins amovibles,
+        directions de générateurs ajoutables et règle de raccourcissement des lignes et colonnes pour
+        <span class="math">Hilb<sup>n,n+1</sup>(A<sup>2</sup>)</span>.
+      </p>
+    </header>
+
+    <section class="yd-app" id="young-diagram-playground" data-language="fr" aria-label="Playground de diagrammes de Young">
+      <aside class="yd-controls" aria-label="Contrôles du playground">
+        <section class="yd-panel">
+          <h2>Partition</h2>
+          <label class="yd-label" for="yd-preset">Exemple</label>
+          <select class="yd-select" id="yd-preset"></select>
+
+          <div class="yd-label-row">
+            <span class="yd-label">Lignes de &lambda;</span>
+            <div class="yd-icon-buttons" aria-label="Contrôles des lignes">
+              <button class="yd-icon-button" id="yd-add-row" type="button" title="Ajouter une ligne">+</button>
+              <button class="yd-icon-button" id="yd-remove-row" type="button" title="Supprimer une ligne">-</button>
+            </div>
+          </div>
+          <div class="yd-row-inputs" id="yd-row-inputs"></div>
+        </section>
+
+        <section class="yd-panel">
+          <h2>Coin</h2>
+          <div class="yd-corner-list" id="yd-corner-list"></div>
+        </section>
+
+        <section class="yd-panel">
+          <h2>Flèches</h2>
+          <label class="yd-toggle">
+            <input id="yd-show-ordinary" type="checkbox" checked>
+            <span>Ordinaire</span>
+          </label>
+          <label class="yd-toggle">
+            <input id="yd-show-nested" type="checkbox" checked>
+            <span>Emboîté</span>
+          </label>
+        </section>
+      </aside>
+
+      <section class="yd-stage" aria-label="Diagramme de Young">
+        <div class="yd-stage-topline">
+          <div>
+            <span class="yd-kicker">&lambda;</span>
+            <strong id="yd-lambda-label"></strong>
+          </div>
+          <div>
+            <span class="yd-kicker">&mu;=&lambda;\c</span>
+            <strong id="yd-mu-label"></strong>
+          </div>
+          <div>
+            <span class="yd-kicker">Boîte choisie</span>
+            <strong id="yd-selected-label"></strong>
+          </div>
+        </div>
+        <div class="yd-svg-wrap" id="yd-svg-wrap"></div>
+        <div class="yd-legend" aria-label="Légende du diagramme">
+          <span><i class="legend-swatch corner"></i>coin c</span>
+          <span><i class="legend-swatch row"></i>à gauche de c</span>
+          <span><i class="legend-swatch column"></i>sous c</span>
+          <span><i class="legend-line ordinary"></i>ordinaire</span>
+          <span><i class="legend-line nested"></i>emboîté</span>
+        </div>
+      </section>
+
+      <section class="yd-details" aria-label="Détails algébriques">
+        <div class="yd-tabs" role="tablist" aria-label="Vues détaillées">
+          <button class="yd-tab is-active" data-tab="fixed" role="tab" type="button">Point fixe</button>
+          <button class="yd-tab" data-tab="weights" role="tab" type="button">Poids</button>
+          <button class="yd-tab" data-tab="all" role="tab" type="button">Toutes les boîtes</button>
+        </div>
+
+        <div class="yd-tab-panel is-active" data-panel="fixed" role="tabpanel">
+          <dl class="yd-definition-list" id="yd-fixed-data"></dl>
+        </div>
+
+        <div class="yd-tab-panel" data-panel="weights" role="tabpanel">
+          <div id="yd-weight-data"></div>
+        </div>
+
+        <div class="yd-tab-panel" data-panel="all" role="tabpanel">
+          <div id="yd-all-box-data"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="../js/young-diagram-playground.js"></script>
+</body>
+
+</html>

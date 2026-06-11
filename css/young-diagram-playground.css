@@ -55,6 +55,31 @@ body.playground-page {
   font-size: 0.92rem;
 }
 
+.nav-language {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.nav-language a,
+.nav-language span {
+  display: inline-flex;
+  min-height: 1.8rem;
+  align-items: center;
+  border: 1px solid var(--yd-line);
+  border-radius: 6px;
+  padding: 0 0.45rem;
+  color: var(--yd-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.nav-language .is-active {
+  border-color: var(--yd-ink);
+  background: var(--yd-ink);
+  color: #fff;
+}
+
 .nav-links a {
   color: var(--yd-muted);
 }

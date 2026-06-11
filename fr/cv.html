@@ -2,7 +2,7 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr-FR">
 
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -24,37 +24,36 @@ layout: null
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link href="./css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="./css/bulma.min.css" rel="stylesheet">
-  <link href="./css/cv.css" rel="stylesheet">
+  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/css/cv.css' | relative_url }}" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
 </head>
 
 <body>
 
   <section>
     <div class="container is-max-desktop">
-      <div class="language-switcher" aria-label="Language switcher">
-        <span class="is-active">EN</span>
-        <a href="{{ '/fr/cv.html' | relative_url }}">FR</a>
+      <div class="language-switcher" aria-label="Sélecteur de langue">
+        <a href="{{ '/cv.html' | relative_url }}">EN</a>
+        <span class="is-active">FR</span>
       </div>
       <div class="columns is-vcentered">
         <div class="column">
           <h1 class="title is-2">{{ site.name }}</h1>
-          <h1 class="subtitle is-5">{{ site.position }}</h1>
+          <h1 class="subtitle is-5">{{ site.data.site_fr.position }}</h1>
         </div>
         <div class="column is-narrow portrait-column">
-          <img class="portrait-image" src="./images/portrait.jpg" alt="A portrait of Chenyang Zhao" />
+          <img class="portrait-image" src="{{ '/images/portrait.jpg' | relative_url }}" alt="Portrait de Chenyang Zhao" />
         </div>
         <div class="column has-text-right">
           <p>
-            <a href="{{ site.url }}">
+            <a href="{{ site.url }}/fr/">
               <i class="fas fa-home"></i>
-              {% assign url_parts = site.url | split: "//" %}
-              {{ url_parts[1] }}
+              felixzhao.com/fr
             </a>
           </p>
           <p>
@@ -79,8 +78,8 @@ layout: null
       </div>
 
       <div class="content">
-        <h2>Education</h2>
-        {% for school in site.data.education %}
+        <h2>Formation</h2>
+        {% for school in site.data.education_fr %}
         <div class="columns">
           <div class="column is-four-fifths">
             <b>{{ school.name }}</b><br />
@@ -92,9 +91,9 @@ layout: null
         </div>
         {% endfor %}
 
-        <h2>Employment</h2>
+        <h2>Expérience</h2>
 
-        {% for job in site.data.employment %}
+        {% for job in site.data.employment_fr %}
         <div class="columns">
           <div class="column is-four-fifths">
             <b>{{ job.company }}</b><br />
@@ -108,15 +107,15 @@ layout: null
         </div>
         {% endfor %}
 
-        <h2>Conferences</h2>
-        {% assign confs = site.data.conferences | reverse %}
+        <h2>Conférences</h2>
+        {% assign confs = site.data.conferences_fr | reverse %}
         {% for conf in confs %}
         <div class="columns">
           <div class="column is-four-fifths">
             <b>{{ conf.name }}</b>{% if conf.location %} — {{ conf.location }}{% endif %}
             {% if conf.role %}<br /><i>{{ conf.role }}</i>{% endif %}
             {% if conf.description %}<br />{{ conf.description }}{% endif %}
-            {% if conf.link %}<br /><a href="{{ conf.link }}" target="_blank">[Website]</a>{% endif %}
+            {% if conf.link %}<br /><a href="{{ conf.link }}" target="_blank">[Site]</a>{% endif %}
           </div>
           <div class="column is-one-fifths has-text-right">
             {{ conf.dates }}
@@ -124,15 +123,15 @@ layout: null
         </div>
         {% endfor %}
         
-        <h2>Talks</h2>
-        {% assign talks = site.data.talks | reverse %}
+        <h2>Exposés</h2>
+        {% assign talks = site.data.talks_fr | reverse %}
         {% for talk in talks %}
         <div class="columns">
           <div class="column is-four-fifths">
             <b>{{ talk.title }}</b><br />
             {{ talk.venue }}{% if talk.location %}, {{ talk.location }}{% endif %}
             {% if talk.description %}<br />{{ talk.description }}{% endif %}
-            {% if talk.link %}<br /><a href="{{ talk.link }}" target="_blank">[Slides/Recording]</a>{% endif %}
+            {% if talk.link %}<br /><a href="{{ talk.link }}" target="_blank">[Diapositives/enregistrement]</a>{% endif %}
           </div>
           <div class="column is-one-fifths has-text-right">
             {{ talk.date }}
@@ -140,8 +139,8 @@ layout: null
         </div>
         {% endfor %}
         
-        <h2>Software</h2>
-        {% assign software = site.data.software | reverse %}
+        <h2>Logiciels</h2>
+        {% assign software = site.data.software_fr | reverse %}
         {% for s in software %}
         <div class="columns">
           <div class="column is-four-fifths">
@@ -149,7 +148,7 @@ layout: null
             {{ s.description }}
             {% if s.repo %}<br /><a href="{{ s.repo }}" target="_blank">[Code]</a>{% endif %}
             {% if s.docs %} <a href="{{ s.docs }}" target="_blank">[Docs]</a>{% endif %}
-            {% if s.link %} <a href="{{ s.link }}" target="_blank">[Website]</a>{% endif %}
+            {% if s.link %} <a href="{{ s.link }}" target="_blank">[Site]</a>{% endif %}
           </div>
           <div class="column is-one-fifths has-text-right">
             {{ s.year }}
@@ -157,15 +156,15 @@ layout: null
         </div>
         {% endfor %}
         
-        <h2>Projects</h2>
+        <h2>Projets</h2>
         
-        {% for project in site.data.projects %}
+        {% for project in site.data.projects_fr %}
         <div class="columns">
           <div class="column is-four-fifths">
             <b>{{ project.title }}</b><br />
             {{ project.description }}
             {% if project.link %}
-            <br /><a href="{{ project.link }}" target="_blank">[Project Link]</a>
+            <br /><a href="{{ project.link }}" target="_blank">[Lien du projet]</a>
             {% endif %}
           </div>
           <div class="column is-one-fifths has-text-right">
@@ -176,7 +175,7 @@ layout: null
 
         <h2>Publications</h2>
 
-        {% for publication in site.data.publications %}
+        {% for publication in site.data.publications_fr %}
         <div class="columns">
           <div class="column is-four-fifths">
             <a href="{{ publication.project_page }}"><b>{{ publication.title }}</b></a>
@@ -231,8 +230,8 @@ layout: null
         <div class="column is-8">
           <div class="content">
             <p>
-              The template for this page was borrowed from <a href="https://github.com/keunhong/keunhong.github.io">this website</a>.
-              <br>Last updated: {{ site.last_updated }}.
+              Le modèle de cette page est adapté de <a href="https://github.com/keunhong/keunhong.github.io">ce site</a>.
+              <br>Dernière mise à jour : {{ site.last_updated }}.
             </p>
           </div>
         </div>

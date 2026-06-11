@@ -1,0 +1,17 @@
+- name: Warwick-Imperial Maths Conference
+  role: Orateur
+  location: Imperial College London, Londres, Royaume-Uni
+  dates: Mars 2026
+  link: https://warwickmathssociety.com/20260215_Warwick-Imperial-Maths-Conference-Spring-2026-itinerary/
+
+- name: Tomorrow's Mathematicians Today 2025
+  role: Orateur
+  location: Université de Greenwich, Londres, Royaume-Uni
+  dates: Mars 2025
+  link: https://sites.google.com/view/ima-tmt-2025
+
+- name: Macaulay2 in the Sciences
+  role: Participant
+  location: MPI MiS, Leipzig, Allemagne
+  dates: Nov. 2024
+  link: https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences

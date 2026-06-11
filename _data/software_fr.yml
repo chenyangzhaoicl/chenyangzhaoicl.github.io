@@ -1,0 +1,7 @@
+- name: GameTheory.m2
+  version: "1.0"
+  year: 2025
+  description: GameTheory.m2 est un package Macaulay2 pour plusieurs notions d'équilibre en théorie des jeux. Il construit les modèles algébro-géométriques et combinatoires associés aux équilibres de Nash, corrélés, de dépendance et d'indépendance conditionnelle.
+  repo: https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages
+  docs: https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html
+  link: https://macaulay2.com/

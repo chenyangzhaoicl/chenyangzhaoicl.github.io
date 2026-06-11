@@ -1,0 +1,38 @@
+- title: "Mémoire de master : théorie des déformations des schémas algébriques avec applications aux problèmes de modules."
+  description: >
+    Encadré par <a href="http://mattbooth.info/">Dr Matt Booth</a>.
+    Thèmes étudiés comme bases : théorie des schémas, foncteur des points, problèmes de modules, théorie des déformations (foncteurs), schéma de Hilbert (de points). Je m'intéresse actuellement 1) à certains comportements locaux de points spéciaux sur le schéma de Hilbert (projectif) et 2) aux déformations des schémas de Hilbert de points sur des variétés toriques et à certains comportements invariants.
+  year: "Oct. 2025 – juin 2026"
+  institution: "Imperial College London"
+
+- title: "Représentation implicite de courbes et surfaces algébriques via des méthodes de syzygies"
+  description: >
+    Étude de la représentation implicite de courbes et surfaces algébriques rationnelles au moyen de matrices issues de syzygies.
+    Étude de plusieurs outils de géométrie algébrique (par exemple les bases des schémas algébriques et les morphismes d'éclatement) et d'algèbre commutative (par exemple les algèbres de Rees et symétriques).
+    Implémentation des résultats en code Macaulay2 et développement d'un package Macaulay2 pour les matrices issues de syzygies de courbes et surfaces algébriques.
+    Étude du problème ouvert des cas où le formalisme ne permet pas de conclure à la validité de la méthode des quadriques mobiles.
+  year: "Juin 2025 – sept. 2025"
+  institution: "Inria"
+
+- title: "Développement du package GameTheory dans Macaulay2"
+  description: >
+    Développement du package GameTheory dans Macaulay2 pour calculer des équilibres de Nash totalement mixtes à l'aide de tenseurs de gains. Contribution au <a href="https://www.mis.mpg.de/events/series/macaulay2-in-the-sciences">workshop</a> et au développement du package.
+    Voici la <a href="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html">documentation</a> officielle Macaulay2 du package.
+  year: "Nov. 2024 – juill. 2025"
+  tags: ["Géométrie algébrique appliquée", "Macaulay2", "Géométrie algébrique computationnelle"]
+
+- title: "Undergraduate Research Opportunity Programme (UROP)"
+  description: >
+    Étude des bases de la géométrie algébrique et de la cryptographie sur les courbes elliptiques à l'aide de la géométrie algébrique et arithmétique. Étude des courbes elliptiques sur les corps finis et de résultats clés du point de vue cryptographique.
+    <a href="https://github.com/chenyangzhaoicl/Algebraic-Geometry-and-Cryptography/blob/main/Basic_ECC.pdf">Mes notes manuscrites.</a>
+  year: "Juil. 2024 – sept. 2024"
+  institution: "Imperial College London"
+
+- title: "Projet de recherche de deuxième année : dynamique sur les espaces homogènes, théorèmes de Ratner et applications"
+  description: >
+    Encadré par <a href="https://profiles.imperial.ac.uk/m.lawn">Dr Marie-Amelie Lawn</a>.
+    Preuve du théorème de classification des mesures de Ratner et application au théorème de Margulis, avec création de visualisations Python pour des flots ergodiques et des résultats quantitatifs.
+    <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation">Voir les visualisations ici.</a> Rédaction de sections clés du rapport et création de visualisations à partir de code.
+    <a href="https://github.com/chenyangzhaoicl/ICL-M2R-Visualisation/blob/main/Dynamics_on_Homogeneous_Spaces__Ratner_s_Theorems_and_Applications.pdf">Voir le rapport ici</a>.
+  year: "Mai 2024 – juin 2024"
+  institution: "Imperial College London"
