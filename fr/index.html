@@ -19,6 +19,7 @@ layout: null
   <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/css/young-diagram-playground.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/css/macaulay2-lab.css' | relative_url }}" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
@@ -212,6 +213,31 @@ layout: null
               <path d="M156 148L252 196" fill="none" stroke="#d7674e" stroke-width="4" stroke-linecap="round" />
               <path d="M252 196l-15-3 11-11z" fill="#d7674e" />
             </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="yd-preview-section m2-preview-section" id="macaulay2-lab-preview">
+        <h2 class="title is-3">Lab Macaulay2</h2>
+        <div class="yd-preview-band m2-preview-band">
+          <div class="yd-preview-copy">
+            <h3>Essayer de petits calculs de géométrie algébrique</h3>
+            <p>
+              Un mini-lab avec des exemples Macaulay2 pour les bases de Gröbner, les idéaux
+              monomiaux, les bords de diagrammes de Young et les tables de Betti.
+            </p>
+            <a class="yd-preview-link" href="macaulay2-lab.html">
+              <span class="icon"><i class="fas fa-terminal"></i></span>
+              <span>Ouvrir le lab</span>
+            </a>
+          </div>
+          <div class="m2-preview-terminal" aria-hidden="true">
+            <div class="m2-preview-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre>i1 : R = QQ[x,y]
+i2 : I = monomialIdeal(x^4,x^2*y,x*y^2,y^3)
+i3 : betti res I</pre>
           </div>
         </div>
       </section>

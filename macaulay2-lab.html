@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Macaulay2 Lab | Chenyang Zhao</title>
+  <link rel="alternate" hreflang="en" href="https://www.felixzhao.com/macaulay2-lab.html">
+  <link rel="alternate" hreflang="fr" href="https://www.felixzhao.com/fr/macaulay2-lab.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="css/bulma.min.css" rel="stylesheet">
+  <link href="css/young-diagram-playground.css" rel="stylesheet">
+  <link href="css/macaulay2-lab.css" rel="stylesheet">
+</head>
+
+<body class="m2-lab-page">
+  <nav class="playground-nav" aria-label="Main navigation">
+    <a class="nav-brand" href="index.html">Chenyang Zhao</a>
+    <div class="nav-links">
+      <a href="index.html#publications">Publications</a>
+      <a href="young-diagram-playground.html">Young Playground</a>
+      <a href="https://macaulay2.com/">Macaulay2</a>
+      <span class="nav-language" aria-label="Language switcher">
+        <span class="is-active" aria-current="page">EN</span>
+        <a href="https://www.felixzhao.com/fr/macaulay2-lab.html" hreflang="fr" lang="fr">FR</a>
+      </span>
+    </div>
+  </nav>
+
+  <main class="playground-shell m2-shell">
+    <header class="playground-heading m2-heading">
+      <div>
+        <p class="eyebrow">Computational algebraic geometry</p>
+        <h1>Macaulay2 Lab</h1>
+      </div>
+      <p>
+        A small browser companion for trying Macaulay2 snippets connected to Groebner bases,
+        monomial ideals, Young diagram boundaries, and free resolutions.
+      </p>
+    </header>
+
+    <section class="m2-lab" id="macaulay2-lab" data-language="en" aria-label="Macaulay2 lab">
+      <aside class="m2-panel" aria-label="Example snippets">
+        <div class="m2-panel-heading">
+          <h2>Examples</h2>
+          <span id="m2-example-count"></span>
+        </div>
+        <div class="m2-example-list" id="m2-example-list"></div>
+      </aside>
+
+      <section class="m2-panel m2-editor-panel" aria-label="Macaulay2 code editor">
+        <div class="m2-editor-topline">
+          <div>
+            <span class="yd-kicker" id="m2-active-kicker"></span>
+            <h2 id="m2-active-title"></h2>
+          </div>
+          <span class="m2-chip">M2</span>
+        </div>
+        <p id="m2-active-description" class="m2-description"></p>
+        <label class="m2-code-label" for="m2-code">Code</label>
+        <textarea id="m2-code" spellcheck="false"></textarea>
+        <div class="m2-actions">
+          <button class="m2-button primary" id="m2-copy-open" type="button">
+            <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+            <span>Copy + Open Runner</span>
+          </button>
+          <button class="m2-button" id="m2-copy" type="button">
+            <span class="icon"><i class="fas fa-copy"></i></span>
+            <span>Copy Code</span>
+          </button>
+          <button class="m2-icon-button" id="m2-reset" type="button" title="Reset example">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+        <p class="m2-status" id="m2-status" aria-live="polite"></p>
+      </section>
+
+      <section class="m2-panel m2-runner-panel" aria-label="Hosted Macaulay2Web runner">
+        <div class="m2-runner-topline">
+          <div>
+            <span class="yd-kicker">Hosted runner</span>
+            <h2>Macaulay2Web</h2>
+          </div>
+          <select class="m2-select" id="m2-runner-select" aria-label="Runner host">
+            <option value="https://www.unimelb-macaulay2.cloud.edu.au/">Melbourne</option>
+            <option value="https://macaulay2.math.gatech.edu/">Georgia Tech</option>
+          </select>
+        </div>
+        <iframe
+          id="m2-runner-frame"
+          src="https://www.unimelb-macaulay2.cloud.edu.au/"
+          title="Macaulay2Web online runner"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          sandbox="allow-downloads allow-forms allow-popups allow-same-origin allow-scripts">
+        </iframe>
+        <div class="m2-runner-footer">
+          <a class="m2-button" id="m2-runner-direct" href="https://www.unimelb-macaulay2.cloud.edu.au/" target="_blank" rel="noopener">
+            <span class="icon"><i class="fas fa-window-restore"></i></span>
+            <span>Open Full Runner</span>
+          </a>
+          <span>Paste the copied snippet into the online session.</span>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/macaulay2-lab.js"></script>
+</body>
+
+</html>
