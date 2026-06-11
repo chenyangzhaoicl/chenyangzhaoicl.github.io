@@ -26,9 +26,13 @@ body {
     justify-content: flex-end;
     gap: 0.4rem;
     margin: 0.75rem 0;
+    position: relative;
+    z-index: 10;
 
     a,
     span {
+        display: inline-flex;
+        align-items: center;
         border: 1px solid #ddd;
         border-radius: 6px;
         padding: 0.25rem 0.55rem;
@@ -36,6 +40,7 @@ body {
         font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
+        pointer-events: auto;
     }
 
     .is-active {

@@ -9,7 +9,7 @@ description: >-
   My research interests lie in algebraic geometry, the keywords of my research are deformation theory, hilbert scheme (of points), moduli problems and computational algebraic geometry. I am currently working on my master thesis under [Dr. Matt Booth](http://mattbooth.info/), which focuses on deformation of algebraic schemes and applications to moduli problems (with a specific dive into the combinatoric structures of torus-fixed points of nested Hilbert scheme of points). Previously I worked on implicit representation of algebraic curves and surfaces via syzygy-based matrices with my supervisor [Dr. Laurent Busé](https://www-sop.inria.fr/members/Laurent.Buse/index.html). I also contributed to the development of a [Macaulay2](https://macaulay2.com/) package on [GameTheory](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/GameTheory/html/index.html).
 
 baseurl: "" # for GitHub Pages
-url: "https://felixzhao.com"
+url: "https://www.felixzhao.com"
 
 twitter_username: ChenyangZh61334
 github_username: chenyangzhaoicl
@@ -24,5 +24,4 @@ plugins:
 
 sass:
   style: compact
-
 

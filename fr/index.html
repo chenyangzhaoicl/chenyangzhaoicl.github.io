@@ -9,6 +9,9 @@ layout: null
 
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{ site.name }}</title>
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
+  <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
 
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
@@ -27,8 +30,8 @@ layout: null
   <section class="hero">
     <div class="hero-body container is-max-desktop">
       <div class="language-switcher" aria-label="Sélecteur de langue">
-        <a href="{{ '/' | relative_url }}">EN</a>
-        <span class="is-active">FR</span>
+        <a href="{{ site.url }}/" hreflang="en" lang="en">EN</a>
+        <span class="is-active" aria-current="page">FR</span>
       </div>
       <div class="columns is-vcentered">
 

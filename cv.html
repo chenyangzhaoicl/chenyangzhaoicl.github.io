@@ -9,6 +9,8 @@ layout: null
 
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{ site.title }}</title>
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/cv.html">
+  <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/cv.html">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -38,8 +40,8 @@ layout: null
   <section>
     <div class="container is-max-desktop">
       <div class="language-switcher" aria-label="Language switcher">
-        <span class="is-active">EN</span>
-        <a href="{{ '/fr/cv.html' | relative_url }}">FR</a>
+        <span class="is-active" aria-current="page">EN</span>
+        <a href="{{ site.url }}/fr/cv.html" hreflang="fr" lang="fr">FR</a>
       </div>
       <div class="columns is-vcentered">
         <div class="column">
