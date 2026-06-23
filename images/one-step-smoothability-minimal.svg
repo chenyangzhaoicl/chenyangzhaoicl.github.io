@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 796 496" role="img" aria-labelledby="title desc">
+  <title id="title">Smoothability of one-step loci</title>
+  <desc id="desc">Hilbert functions H equals 1,5,6 and 1,5,7 flow by an arrow to a smoothable locus.</desc>
+  <defs>
+    <style>
+      .panel { fill: #fffdf7; stroke: #e4dfd2; stroke-width: 2; }
+      .ink { fill: #17211f; }
+      .muted { fill: #65706c; }
+      .line { stroke: #17211f; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .teal { fill: #2f9b8f; }
+      .teal-line { stroke: #2f9b8f; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      text { font-family: "Noto Sans", "Google Sans", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="796" height="496" fill="#fbfaf4"/>
+  <rect class="panel" x="42" y="40" width="712" height="416" rx="26"/>
+
+  <g transform="translate(122 145)">
+    <rect x="0" y="0" width="244" height="76" rx="22" fill="#f5f0e5" stroke="#ded6c7" stroke-width="2"/>
+    <text class="ink" x="122" y="49" font-size="34" font-weight="700" text-anchor="middle">H = (1,5,6)</text>
+
+    <rect x="0" y="118" width="244" height="76" rx="22" fill="#f5f0e5" stroke="#ded6c7" stroke-width="2"/>
+    <text class="ink" x="122" y="167" font-size="34" font-weight="700" text-anchor="middle">H = (1,5,7)</text>
+  </g>
+
+  <path class="teal-line" d="M413 248h144"/>
+  <path class="teal" d="M591 248l-48 33v-66z"/>
+
+  <g transform="translate(596 160)">
+    <circle cx="58" cy="88" r="68" fill="#dff3ee" stroke="#2f9b8f" stroke-width="4"/>
+    <path class="teal-line" d="M23 89l25 27 48-60"/>
+    <text class="ink" x="58" y="195" font-size="34" font-weight="700" text-anchor="middle">smoothable</text>
+  </g>
+
+  <text class="muted" x="398" y="402" font-size="24" font-weight="700" text-anchor="middle">one-step loci</text>
+</svg>

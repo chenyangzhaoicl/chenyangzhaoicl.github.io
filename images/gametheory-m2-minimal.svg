@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 796 496" role="img" aria-labelledby="title desc">
+  <title id="title">GameTheory package for Macaulay2</title>
+  <desc id="desc">A Macaulay2 chip computes a small payoff grid and highlights an equilibrium.</desc>
+  <defs>
+    <style>
+      .panel { fill: #fffdf7; stroke: #e4dfd2; stroke-width: 2; }
+      .ink { fill: #17211f; }
+      .muted { fill: #65706c; }
+      .grid { fill: #ffffff; stroke: #18211f; stroke-width: 4; }
+      .thin { stroke: #18211f; stroke-width: 4; stroke-linecap: round; fill: none; }
+      .teal { fill: #2f9b8f; }
+      .amber { fill: #f2b84b; }
+      .teal-line { stroke: #2f9b8f; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      text { font-family: "Noto Sans", "Google Sans", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="796" height="496" fill="#fbfaf4"/>
+  <rect class="panel" x="42" y="40" width="712" height="416" rx="26"/>
+
+  <g transform="translate(111 152)">
+    <rect x="0" y="0" width="172" height="132" rx="24" fill="#17211f"/>
+    <text x="86" y="81" fill="#ffffff" font-size="58" font-weight="800" text-anchor="middle">M2</text>
+    <text x="86" y="111" fill="#c8d2cf" font-size="18" font-weight="700" text-anchor="middle">GameTheory</text>
+  </g>
+
+  <path class="teal-line" d="M326 218h94"/>
+  <path class="teal" d="M449 218l-43 29v-58z"/>
+
+  <g transform="translate(479 113)">
+    <rect class="grid" x="0" y="0" width="190" height="190" rx="16"/>
+    <path class="thin" d="M95 0v190M0 95h190"/>
+    <rect x="95" y="95" width="95" height="95" rx="0" class="amber" opacity="0.88"/>
+    <path class="teal-line" d="M119 145l24 22 39-52"/>
+  </g>
+
+  <text class="ink" x="574" y="377" font-size="34" font-weight="700" text-anchor="middle">equilibrium</text>
+  <text class="muted" x="574" y="409" font-size="23" font-weight="700" text-anchor="middle">computed in M2</text>
+</svg>

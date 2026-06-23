@@ -3,7 +3,7 @@
   venue: arXiv, 2026
   description: "Nous démontrons que les lieux one-step de fonctions de Hilbert (1,5,6) et (1,5,7) sont lissables en dimension de plongement cinq. La preuve utilise la famille lissable de régularité deux d'Erman-Velasco et un test de rang différentiel sur un corps fini, plaçant ces cas exceptionnels du problème de Shafarevich du côté lissable."
   arxiv: "2606.22368"
-  image: one-step-smoothability.svg
+  image: one-step-smoothability-minimal.svg
   authors:
     - Chenyang Zhao
 
@@ -12,7 +12,7 @@
   venue: arXiv, 2026
   description: "Nous étudions le schéma de Hilbert emboîté de points du plan affine à l'aide de la théorie des déformations, des actions de tore et de la combinatoire des diagrammes de Young. Nous identifions les espaces tangents aux paires emboîtées, décrivons les points fixes par un tore par des partitions avec un coin amovible, obtenons la formule des poids tangents par une règle de raccourcissement des diagrammes de Young, et vérifions la formule par calcul dans Macaulay2."
   arxiv: "2606.08120"
-  image: nested-hilbert-young-arrows.png
+  image: nested-hilbert-fixed-point-minimal.svg
   authors:
     - Chenyang Zhao
 
@@ -21,7 +21,7 @@
   venue: arXiv, 2025
   description: "Nous présentons la version 1.0 du package GameTheory pour Macaulay2, consacré au calcul d'équilibres en théorie des jeux et disponible depuis la version 1.25.05 de Macaulay2. Nous expliquons brièvement quatre notions d'équilibre, Nash, corrélé, de dépendance et d'indépendance conditionnelle, puis nous illustrons leur implémentation dans le package par des exemples."
   arxiv: "2507.16755"
-  image: agt.png
+  image: gametheory-m2-minimal.svg
   authors:
     - Erin Connelly
     - Vincenzo Galgano
