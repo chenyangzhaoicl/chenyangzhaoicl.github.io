@@ -1,3 +1,12 @@
+- id: one-step-smoothability
+  title: "Smoothability of the one-step loci with Hilbert functions (1,5,6) and (1,5,7)"
+  venue: arXiv, 2026
+  description: "Nous démontrons que les lieux one-step de fonctions de Hilbert (1,5,6) et (1,5,7) sont lissables en dimension de plongement cinq. La preuve utilise la famille lissable de régularité deux d'Erman-Velasco et un test de rang différentiel sur un corps fini, plaçant ces cas exceptionnels du problème de Shafarevich du côté lissable."
+  arxiv: "2606.22368"
+  image: one-step-smoothability.svg
+  authors:
+    - Chenyang Zhao
+
 - id: nested-hilbert-scheme
   title: "Deformation Theory and Torus-Fixed Geometry of the Nested Hilbert Scheme of Points"
   venue: arXiv, 2026

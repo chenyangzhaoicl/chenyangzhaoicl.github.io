@@ -14,7 +14,7 @@ url: "https://www.felixzhao.com"
 twitter_username: ChenyangZh61334
 github_username: chenyangzhaoicl
 google_scholar: _2HOwMIAAAAJ
-last_updated: 11 June 2026
+last_updated: 23 June 2026
 
 # ✅ 使用官方推荐方式设置主题
 remote_theme: jekyll/minima
@@ -24,4 +24,3 @@ plugins:
 
 sass:
   style: compact
-

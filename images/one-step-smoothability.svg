@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 796 496" role="img" aria-labelledby="title desc">
+  <title id="title">Smoothability of one-step loci thumbnail</title>
+  <desc id="desc">A diagrammatic thumbnail showing Hilbert functions (1,5,6) and (1,5,7), a map to a Grassmannian, and a finite-field rank certificate.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fbfbf8"/>
+      <stop offset="1" stop-color="#eef6f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#151515" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerHeight="8" markerWidth="8" orient="auto" refX="7" refY="4">
+      <path d="M0 0 8 4 0 8Z" fill="#0a8f78"/>
+    </marker>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .sans { font-family: "Noto Sans", Arial, sans-serif; }
+      .label { fill: #60646c; font-size: 21px; font-weight: 700; letter-spacing: 1px; }
+      .small { fill: #60646c; font-size: 18px; }
+      .ink { fill: #171717; }
+      .teal { fill: #0a8f78; }
+      .amber { fill: #f2b94b; }
+    </style>
+  </defs>
+  <rect width="796" height="496" fill="url(#paper)"/>
+  <g opacity="0.32" stroke="#d6d9de" stroke-width="1">
+    <path d="M72 70H724M72 138H724M72 206H724M72 274H724M72 342H724M72 410H724"/>
+    <path d="M116 42V454M184 42V454M252 42V454M320 42V454M388 42V454M456 42V454M524 42V454M592 42V454M660 42V454"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="70" y="64" width="248" height="156" rx="10" fill="#fff" stroke="#d6d9de"/>
+    <rect x="72" y="64" width="244" height="44" rx="10" fill="#171717"/>
+    <text x="94" y="94" class="sans" fill="#fff" font-size="19" font-weight="700">one-step loci</text>
+    <text x="94" y="148" class="mono ink" font-size="31" font-weight="700">H = (1,5,6)</text>
+    <text x="94" y="189" class="mono ink" font-size="31" font-weight="700">H = (1,5,7)</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="482" y="60" width="244" height="160" rx="10" fill="#fff" stroke="#d6d9de"/>
+    <text x="508" y="102" class="label sans">target</text>
+    <text x="508" y="145" class="mono ink" font-size="30" font-weight="700">Gr(e, Sym^2 k^5)</text>
+    <text x="508" y="184" class="small sans">dominant for e = 6, 7</text>
+  </g>
+  <path d="M335 143C382 111 420 110 463 142" fill="none" stroke="#0a8f78" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="324" y="99" class="mono teal" font-size="22" font-weight="700">dominant map</text>
+  <g filter="url(#shadow)">
+    <rect x="86" y="287" width="276" height="124" rx="10" fill="#fff" stroke="#d6d9de"/>
+    <text x="112" y="329" class="label sans">quadrics</text>
+    <text x="112" y="370" class="mono ink" font-size="25">q(a) = sum ai yi^2</text>
+    <text x="185" y="400" class="mono ink" font-size="25">- (sum ai yi)^2</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="436" y="286" width="274" height="124" rx="10" fill="#fff" stroke="#d6d9de"/>
+    <text x="462" y="328" class="label sans">rank certificate</text>
+    <g class="mono" font-size="22" font-weight="700">
+      <text x="462" y="371" fill="#171717">F_32003</text>
+      <text x="584" y="371" fill="#0a8f78">max rank</text>
+    </g>
+    <g transform="translate(462 386)">
+      <rect width="18" height="18" fill="#0a8f78"/>
+      <rect x="24" width="18" height="18" fill="#f2b94b"/>
+      <rect x="48" width="18" height="18" fill="#0a8f78"/>
+      <rect x="72" width="18" height="18" fill="#d7674e"/>
+      <rect x="96" width="18" height="18" fill="#0a8f78"/>
+      <rect x="120" width="18" height="18" fill="#f2b94b"/>
+      <rect x="144" width="18" height="18" fill="#0a8f78"/>
+      <rect x="168" width="18" height="18" fill="#0a8f78"/>
+      <rect x="192" width="18" height="18" fill="#f2b94b"/>
+    </g>
+  </g>
+  <path d="M368 348H417" fill="none" stroke="#0a8f78" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="70" y="456" class="sans small">smoothable component of Hilb^12(A^5) and Hilb^13(A^5)</text>
+</svg>

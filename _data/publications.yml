@@ -1,3 +1,12 @@
+- id: one-step-smoothability
+  title: "Smoothability of the one-step loci with Hilbert functions (1,5,6) and (1,5,7)"
+  venue: arXiv, 2026
+  description: "We prove that the one-step loci with Hilbert functions (1,5,6) and (1,5,7) are smoothable in embedding dimension five. The proof uses the Erman-Velasco smoothable regularity-two family and a finite-field differential rank test, placing these exceptional Shafarevich gap cases on the smoothable side."
+  arxiv: "2606.22368"
+  image: one-step-smoothability.svg
+  authors:
+    - Chenyang Zhao
+
 - id: nested-hilbert-scheme
   title: "Deformation Theory and Torus-Fixed Geometry of the Nested Hilbert Scheme of Points"
   venue: arXiv, 2026
