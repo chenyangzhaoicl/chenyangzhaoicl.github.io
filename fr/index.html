@@ -38,13 +38,13 @@ layout: null
 
       <section aria-labelledby="research">
         <h2 id="research">Intérêts de recherche</h2>
-        <p>Géométrie algébrique, théorie des déformations, schémas de Hilbert et méthodes de calcul.</p>
+        <p>Mes recherches se situent à l’interface de la géométrie algébrique et de la modélisation géométrique.</p>
       </section>
 
       <section aria-labelledby="publications">
         <h2 id="publications">Prépublications choisies</h2>
         <ul class="publications">
-          {% for publication in site.data.publications_fr limit:2 %}
+          {% for publication in site.data.publications_fr limit:3 %}
           <li>
             <a href="https://arxiv.org/abs/{{ publication.arxiv }}" lang="en">{{ publication.title }}</a>.
             <span class="meta">{{ publication.venue }}.</span>
