@@ -2,275 +2,67 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html lang="fr-FR">
-
+<html lang="fr">
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>{{ site.name }}</title>
-  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/">
-  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
-
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/young-diagram-playground.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/macaulay2-lab.css' | relative_url }}" rel="stylesheet">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
-  <script src="{{ '/js/index.js' | relative_url }}"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.name }} — Mathématiques</title>
+  <meta name="description" content="Chenyang Zhao, doctorant en mathématiques à l’Université Côte d’Azur et Inria Sophia Antipolis, équipe Aromath.">
+  <link rel="canonical" href="{{ '/fr/' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ '/fr/' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/css/academic.css' | relative_url }}">
 </head>
-
 <body>
+  <div class="page">
+    <header class="site-header">
+      <h1>{{ site.name }}</h1>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="{{ '/fr/' | relative_url }}" aria-current="page">Accueil</a>
+        <a href="{{ '/fr/cv.html' | relative_url }}">CV</a>
+        <a href="{{ '/' | relative_url }}" hreflang="en" lang="en">English</a>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <div class="hero-body container is-max-desktop">
-      <div class="language-switcher" aria-label="Sélecteur de langue">
-        <a href="{{ site.url }}/" hreflang="en" lang="en">EN</a>
-        <span class="is-active" aria-current="page">FR</span>
-      </div>
-      <div class="columns is-vcentered">
-
-        <div class="column is-4">
-          <div class="portrait">
-            <img src="{{ '/images/portrait.jpg' | relative_url }}" />
-          </div>
+    <main>
+      <div class="intro">
+        <div>
+          {{ site.data.site_fr.description | markdownify }}
+          <p>Je suis diplômé d’un MSci en mathématiques d’<a href="https://www.imperial.ac.uk/">Imperial College London</a>,
+            avec la distinction <span lang="en">First-Class Honours</span>.</p>
         </div>
-
-        <div class="column">
-          <h1 class="title">
-            <b>{{ site.name }}</b>
-          </h1>
-          <div class="content has-text-justified">
-            {{ site.data.site_fr.description | markdownify }}
-            <div class="buttons">
-              <a class="external-link button is-light" href="cv.html">
-                <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
-              </a>
-
-              <a class="external-link button is-light"
-                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-                <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                <span>Scholar</span>
-              </a>
-
-              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Github</span>
-              </a>
-
-              <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="icon"><i class="fab fa-twitter"></i></span>
-                <span>Twitter</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
+        <img class="portrait" src="{{ '/images/portrait-small.jpg' | relative_url }}"
+          alt="Chenyang Zhao lors d’une course à pied" width="180" height="180">
       </div>
-    </div>
-  </section>
 
-  <!-- News. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
-  </div>
+      <section aria-labelledby="research">
+        <h2 id="research">Intérêts de recherche</h2>
+        <p>Géométrie algébrique, théorie des déformations, schémas de Hilbert et méthodes de calcul.</p>
+      </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-
-      <!--<h2 class="title is-3">News</h2>
-      <div class="content">
-        <ul>
-          {% for news in site.data.news %}
+      <section aria-labelledby="publications">
+        <h2 id="publications">Prépublications choisies</h2>
+        <ul class="publications">
+          {% for publication in site.data.publications_fr limit:2 %}
           <li>
-            <b>{{ news.date }}</b>: {{ news.description | markdownify | remove: '<p>' | remove: '</p>' }}
+            <a href="https://arxiv.org/abs/{{ publication.arxiv }}" lang="en">{{ publication.title }}</a>.
+            <span class="meta">{{ publication.venue }}.</span>
           </li>
           {% endfor %}
         </ul>
-      </div>-->
-
-      <h2 class="title is-3" id="publications">Publications</h2>
-
-      {% for publication in site.data.publications_fr %}
-      <div class="publication-block columns">
-
-        <div class="publication-image-column column is-narrow">
-          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
-            {% if publication.image_mouseover contains "mp4" %}
-            <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-              <source src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
-              Votre navigateur ne prend pas en charge la balise vidéo.
-            </video>
-            {% endif %}
-            <img alt="{{ publication.title }}" src="{{ '/images/' | append: publication.image | relative_url }}" />
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="content">
-            {% if publication.project_page %}
-              <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
-            {% else %}
-            <h3 class="publication-title">{{ publication.title }}</h3>
-            {% endif %}
-            <div class="publication-authors">
-              {% for author_id in publication.authors %}
-              {% if site.data.authors[author_id] %}
-                {% assign author = site.data.authors[author_id] %}
-                <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                  {% if author.is_me %}
-                  {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
-                  endif %}
-                  {% else %}
-                  <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
-                    }}</a>{% if forloop.last == false %},{% endif %}
-                  {% endif %}
-                </span>
-              {% else %}
-                {% assign author = author_id %}
-                <span class="author-block">
-                  {{ author }}{% if forloop.last == false %},{%endif %}
-                </span>
-              {% endif %}
-              {% endfor %}
-            </div>
-            <div class="publication-venue">
-              <span>{{ publication.venue }}</span>
-              {% for award in publication.awards %}
-                <span class="publication-venue-emph">{{ award }}<span>
-              {% endfor %}
-            </div>
-            <p class="publication-description">{{ publication.description }}</p>
-            <!-- Publication Links. -->
-            <div class="publication-links buttons field has-addons">
-              {% if publication.project_page %}
-              <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
-                <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                <span>Page projet</span>
-              </a>
-              {% endif %}
-              {% if publication.arxiv %}
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>PDF</span>
-              </a>
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ publication.arxiv }}">
-                <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv</span>
-              </a>
-              {% endif %}
-              {% if publication.github %}
-              <a class="external-link button is-small is-ghost" href="https://github.com/{{ publication.github }}">
-                <span class="icon"><i class="fa fab fa-github"></i></span>
-                <span>Code</span>
-              </a>
-              {% endif %}
-            </div>
-            <!--/ Publication Links. -->
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-
-      <section class="yd-preview-section" id="young-diagram-playground-preview">
-        <h2 class="title is-3">Playground interactif</h2>
-        <div class="yd-preview-band">
-          <div class="yd-preview-copy">
-            <h3>Diagrammes de Young et points fixes emboîtés</h3>
-            <p>
-              Un petit compagnon logiciel pour le mémoire : coins amovibles, directions de
-              générateurs monomiaux ajoutables et règle de raccourcissement des lignes et colonnes
-              pour les poids tangents.
-            </p>
-            <a class="yd-preview-link" href="young-diagram-playground.html">
-              <span class="icon"><i class="fas fa-project-diagram"></i></span>
-              <span>Ouvrir le playground</span>
-            </a>
-          </div>
-          <div class="yd-preview-figure" aria-hidden="true">
-            <svg viewBox="0 0 360 250" role="img">
-              <g fill="#fff" stroke="#d4d6da">
-                <path d="M84 28h48v48H84zM132 28h48v48h-48zM180 28h48v48h-48zM228 28h48v48h-48zM276 28h48v48h-48z" />
-                <path d="M84 76h48v48H84zM132 76h48v48h-48zM180 76h48v48h-48zM228 76h48v48h-48zM276 76h48v48h-48z" />
-                <path d="M84 124h48v48H84zM132 124h48v48h-48zM180 124h48v48h-48zM228 124h48v48h-48zM276 124h48v48h-48z" />
-                <path d="M84 172h48v48H84zM132 172h48v48h-48zM180 172h48v48h-48zM228 172h48v48h-48zM276 172h48v48h-48z" />
-              </g>
-              <g fill="#fff" stroke="#151515" stroke-width="3">
-                <path d="M84 76h48v48H84zM84 124h48v48H84zM84 172h48v48H84zM132 124h48v48h-48zM132 172h48v48h-48zM180 172h48v48h-48zM228 172h48v48h-48z" />
-              </g>
-              <path d="M132 124h48v48h-48z" fill="#ffe0a3" stroke="#151515" stroke-width="3" />
-              <circle cx="156" cy="196" r="6" fill="#111" />
-              <path d="M156 100L252 196" fill="none" stroke="#717783" stroke-width="4" stroke-linecap="round" />
-              <path d="M156 148L252 196" fill="none" stroke="#d7674e" stroke-width="4" stroke-linecap="round" />
-              <path d="M252 196l-15-3 11-11z" fill="#d7674e" />
-            </svg>
-          </div>
-        </div>
+        <p><a href="https://scholar.google.com/citations?user={{ site.google_scholar }}">Toutes les publications sur Google Scholar</a></p>
       </section>
 
-      <section class="yd-preview-section m2-preview-section" id="macaulay2-lab-preview">
-        <h2 class="title is-3">Lab Macaulay2</h2>
-        <div class="yd-preview-band m2-preview-band">
-          <div class="yd-preview-copy">
-            <h3>Essayer de petits calculs de géométrie algébrique</h3>
-            <p>
-              Un mini-lab avec des exemples Macaulay2 pour les bases de Gröbner, les idéaux
-              monomiaux, les bords de diagrammes de Young et les tables de Betti.
-            </p>
-            <a class="yd-preview-link" href="macaulay2-lab.html">
-              <span class="icon"><i class="fas fa-terminal"></i></span>
-              <span>Ouvrir le lab</span>
-            </a>
-          </div>
-          <div class="m2-preview-terminal" aria-hidden="true">
-            <div class="m2-preview-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <pre>i1 : R = QQ[x,y]
-i2 : I = monomialIdeal(x^4,x^2*y,x*y^2,y^3)
-i3 : betti res I</pre>
-          </div>
-        </div>
+      <section class="contact" aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>Courriel : <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+          Bureau : Y109, Inria Sophia Antipolis<br>
+          2004 route des Lucioles, 06902 Sophia Antipolis, France</p>
       </section>
-    </div>
-  </section>
+    </main>
 
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content footer-links has-text-centered">
-        <a href="mailto:{{ site.email }}">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a class="external-link" href="https://github.com/{{ site.github_username }}">
-          <i class="fab fa-github"></i>
-        </a>
-        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-          <i class="ai ai-google-scholar"></i>
-        </a>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              Le modèle de cette page est adapté de <a href="https://github.com/keunhong/keunhong.github.io">ce site</a>.
-              <br>Dernière mise à jour : {{ site.last_updated }}.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+    <footer class="site-footer">Dernière mise à jour : {{ site.data.site_fr.last_updated }}.</footer>
+  </div>
 </body>
-
 </html>

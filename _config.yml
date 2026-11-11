@@ -1,10 +1,12 @@
 title: Chenyang Zhao
 name: Chenyang Zhao
-position: MSci Imperial College London
-email: cz2922@ic.ac.uk
+position: PhD student, Université Côte d’Azur and Inria
+email: chenyang.zhao@inria.fr
 
 description: >-
-  I am a final-year MSci student in Mathematics at [Imperial College London](https://www.imperial.ac.uk/), working in algebraic geometry, especially deformation theory, Hilbert schemes, moduli problems, and computational methods.
+  I am a PhD student in mathematics at [Université Côte d’Azur](https://univ-cotedazur.fr/)
+  and Inria Sophia Antipolis, in the [Aromath team](https://team.inria.fr/aromath/),
+  under the supervision of [Laurent Busé](https://www-sop.inria.fr/members/Laurent.Buse/).
 
 baseurl: "" # for GitHub Pages
 url: "https://www.felixzhao.com"
@@ -12,7 +14,7 @@ url: "https://www.felixzhao.com"
 twitter_username: ChenyangZh61334
 github_username: chenyangzhaoicl
 google_scholar: _2HOwMIAAAAJ
-last_updated: 23 June 2026
+last_updated: 11 November 2026
 
 # ✅ 使用官方推荐方式设置主题
 remote_theme: jekyll/minima

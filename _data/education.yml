@@ -1,6 +1,8 @@
-- name: Imperial College London
+- name: Université Côte d’Azur and Inria Sophia Antipolis
   description: >-
-    MSci in Mathematics.
-    <br>Currently in the final year of the program. Modules I've picked include: Algebraic Curves, Algebra 3, Algebraic Number Theory, Algebraic Topology, Galois Theory, Geometry Curves and Surfaces, Dynamical System, Group Representation Theory, Graph Theory, Computational Linear Algebra, Commutative Algebra, Algebra 4 (Homological Algebra), Algebraic Geometry, Complex Manifolds, etc.
-  dates: Oct 2022 – Present
+    PhD in Mathematics, Aromath group.
+    Supervised by <a href="https://www-sop.inria.fr/members/Laurent.Buse/">Laurent Busé</a>.
+  dates: Current
 
+- name: Imperial College London
+  description: MSci in Mathematics, First-Class Honours.

@@ -2,245 +2,66 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html lang="fr-FR">
-
+<html lang="fr">
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>{{ site.title }}</title>
-  <link rel="alternate" hreflang="en" href="{{ site.url }}/cv.html">
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/cv.html">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/cv.css' | relative_url }}" rel="stylesheet">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV | {{ site.name }}</title>
+  <meta name="description" content="CV de Chenyang Zhao, doctorant en mathématiques à l’Université Côte d’Azur et à Inria Sophia Antipolis.">
+  <link rel="canonical" href="{{ '/fr/cv.html' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/cv.html' | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ '/fr/cv.html' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/css/academic.css' | relative_url }}">
 </head>
-
 <body>
+  <div class="page">
+    <header class="site-header">
+      <h1>{{ site.name }}</h1>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="{{ '/fr/' | relative_url }}">Accueil</a>
+        <a href="{{ '/fr/cv.html' | relative_url }}" aria-current="page">CV</a>
+        <a href="{{ '/cv.html' | relative_url }}" lang="en" hreflang="en">English</a>
+      </nav>
+    </header>
 
-  <section>
-    <div class="container is-max-desktop">
-      <div class="language-switcher" aria-label="Sélecteur de langue">
-        <a href="{{ site.url }}/cv.html" hreflang="en" lang="en">EN</a>
-        <span class="is-active" aria-current="page">FR</span>
-      </div>
-      <div class="columns is-vcentered">
-        <div class="column">
-          <h1 class="title is-2">{{ site.name }}</h1>
-          <h1 class="subtitle is-5">{{ site.data.site_fr.position }}</h1>
-        </div>
-        <div class="column is-narrow portrait-column">
-          <img class="portrait-image" src="{{ '/images/portrait.jpg' | relative_url }}" alt="Portrait de Chenyang Zhao" />
-        </div>
-        <div class="column has-text-right">
-          <p>
-            <a href="{{ site.url }}/fr/">
-              <i class="fas fa-home"></i>
-              felixzhao.com/fr
-            </a>
-          </p>
-          <p>
-            <a href="https://github.com/{{ site.github_username }}">
-              <i class="fab fa-github"></i>
-              {{ site.github_username }}
-            </a>
-          </p>
-          <p>
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <i class="fab fa-twitter"></i>
-              {{ site.twitter_username }}
-            </a>
-          </p>
-          <p>
-            <a href="mailto:{{ site.email }}">
-              <i class="fas fa-envelope"></i>
-              {{ site.email }}
-            </a>
-          </p>
-        </div>
-      </div>
+    <main>
+      <h2>Curriculum vitæ</h2>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 
-      <div class="content">
-        <h2>Formation</h2>
+      <section aria-labelledby="formation">
+        <h2 id="formation">Formation</h2>
         {% for school in site.data.education_fr %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ school.name }}</b><br />
-            {{ school.description }}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ school.dates }}
-          </div>
+        <div class="entry">
+          <p><strong>{{ school.name }}</strong>{% if school.dates %} <span class="meta">({{ school.dates }})</span>{% endif %}<br>
+          {{ school.description }}</p>
         </div>
         {% endfor %}
+      </section>
 
-        <h2>Expérience</h2>
+      <section aria-labelledby="recherche">
+        <h2 id="recherche">Thèmes de recherche</h2>
+        <p>Géométrie algébrique, théorie des déformations, schémas de Hilbert et méthodes computationnelles.</p>
+      </section>
 
+      <section aria-labelledby="experience">
+        <h2 id="experience">Expérience de recherche</h2>
         {% for job in site.data.employment_fr %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ job.company }}</b><br />
-            {{ job.description }}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ job.dates }}
-            <br />
-            {{ job.location }}
-          </div>
+        <div class="entry">
+          <p><strong>{{ job.company }}</strong> <span class="meta">({{ job.dates }})</span><br>
+          {{ job.description }}</p>
         </div>
         {% endfor %}
+      </section>
 
-        <h2>Conférences</h2>
-        {% assign confs = site.data.conferences_fr | reverse %}
-        {% for conf in confs %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ conf.name }}</b>{% if conf.location %} — {{ conf.location }}{% endif %}
-            {% if conf.role %}<br /><i>{{ conf.role }}</i>{% endif %}
-            {% if conf.description %}<br />{{ conf.description }}{% endif %}
-            {% if conf.link %}<br /><a href="{{ conf.link }}" target="_blank">[Site]</a>{% endif %}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ conf.dates }}
-          </div>
-        </div>
-        {% endfor %}
-        
-        <h2>Exposés</h2>
-        {% assign talks = site.data.talks_fr | reverse %}
-        {% for talk in talks %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ talk.title }}</b><br />
-            {{ talk.venue }}{% if talk.location %}, {{ talk.location }}{% endif %}
-            {% if talk.description %}<br />{{ talk.description }}{% endif %}
-            {% if talk.link %}<br /><a href="{{ talk.link }}" target="_blank">[Diapositives/enregistrement]</a>{% endif %}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ talk.date }}
-          </div>
-        </div>
-        {% endfor %}
-        
-        <h2>Logiciels</h2>
-        {% assign software = site.data.software_fr | reverse %}
-        {% for s in software %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ s.name }}</b>{% if s.version %} v{{ s.version }}{% endif %}<br />
-            {{ s.description }}
-            {% if s.repo %}<br /><a href="{{ s.repo }}" target="_blank">[Code]</a>{% endif %}
-            {% if s.docs %} <a href="{{ s.docs }}" target="_blank">[Docs]</a>{% endif %}
-            {% if s.link %} <a href="{{ s.link }}" target="_blank">[Site]</a>{% endif %}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ s.year }}
-          </div>
-        </div>
-        {% endfor %}
-        
-        <h2>Projets</h2>
-        
-        {% for project in site.data.projects_fr %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ project.title }}</b><br />
-            {{ project.description }}
-            {% if project.link %}
-            <br /><a href="{{ project.link }}" target="_blank">[Lien du projet]</a>
-            {% endif %}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ project.year }}
-          </div>
-        </div>
-        {% endfor %}
-
-        <h2>Publications</h2>
-
-        {% for publication in site.data.publications_fr %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <a href="{{ publication.project_page }}"><b>{{ publication.title }}</b></a>
-            <div class="publication-authors">
-              {% for author_id in publication.authors %}
-              {% if site.data.authors[author_id] %}
-                {% assign author = site.data.authors[author_id] %}
-                <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                  {% if author.is_me %}
-                  {{ author.first_name | slice : 0 }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
-                  endif %}
-                  {% else %}
-                  <a href="{{ author.website }}">{{ author.first_name | slice : 0 }} {{ author.middle_name }} {{ author.last_name
-                    }}</a>{% if forloop.last == false %},{% endif %}
-                  {% endif %}
-                </span>
-              {% else %}
-                {% assign author = author_id %}
-                {% assign name_parts = author | split: " " %}
-                <span class="author-block">
-                  {{ name_parts[0] | slice : 0 }} {{ name_parts[-1] }}{% if forloop.last == false %},{%
-                    endif %}
-                </span>
-              {% endif %}
-              {% endfor %}
-            </div>
-            {{ publication.description }}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ publication.venue }}
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content footer-links has-text-centered">
-        <a href="mailto:{{ site.email }}">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a class="external-link" href="https://github.com/{{ site.github_username }}">
-          <i class="fab fa-github"></i>
-        </a>
-        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-          <i class="ai ai-google-scholar"></i>
-        </a>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              Le modèle de cette page est adapté de <a href="https://github.com/keunhong/keunhong.github.io">ce site</a>.
-              <br>Dernière mise à jour : {{ site.last_updated }}.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+      <section aria-labelledby="prepublications">
+        <h2 id="prepublications">Prépublications sélectionnées</h2>
+        <ul class="publications">
+          {% for publication in site.data.publications_fr limit:2 %}
+          <li><a href="https://arxiv.org/abs/{{ publication.arxiv }}">{{ publication.title }}</a>. <span class="meta">{{ publication.venue }}.</span></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+  </div>
 </body>
-
 </html>
