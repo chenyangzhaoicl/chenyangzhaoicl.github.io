@@ -38,12 +38,6 @@ layout: null
         {% endfor %}
       </section>
 
-      <section aria-labelledby="memoire-master">
-        <h2 id="memoire-master">Mémoire de master</h2>
-        <p><em lang="en">Deformation theory of algebraic schemes with applications to moduli problems.</em><br>
-          Imperial College London, 2026. Sous la direction de <a href="https://mattbooth.info/">Matt Booth</a>.</p>
-      </section>
-
       <section aria-labelledby="recherche">
         <h2 id="recherche">Thèmes de recherche</h2>
         <p>Mes recherches se situent à l’interface de la géométrie algébrique et de la modélisation géométrique.</p>
@@ -63,7 +57,7 @@ layout: null
         <h2 id="prepublications">Prépublications sélectionnées</h2>
         <ul class="publications">
           {% for publication in site.data.publications_fr limit:3 %}
-          <li><a href="https://arxiv.org/abs/{{ publication.arxiv }}">{{ publication.title }}</a>. <span class="meta">{{ publication.venue }}.</span></li>
+          <li><a href="https://arxiv.org/abs/{{ publication.arxiv }}">{{ publication.title }}</a>. <span class="meta">{{ publication.venue }}.</span>{% if publication.note %}<br><span class="meta">{{ publication.note }}</span>{% endif %}</li>
           {% endfor %}
         </ul>
       </section>

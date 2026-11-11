@@ -9,6 +9,7 @@
 
 - id: nested-hilbert-scheme
   title: "Deformation Theory and Torus-Fixed Geometry of the Nested Hilbert Scheme of Points"
+  note: 'Master’s thesis, supervised by <a href="https://mattbooth.info/">Matt Booth</a>.'
   venue: arXiv, 2026
   description: "We study the nested Hilbert scheme of points on the affine plane via deformation theory, torus actions, and Young diagram combinatorics. We identify tangent spaces at nested pairs, describe torus-fixed points by partitions with a removable corner, derive the tangent-weight formula using a Young-diagram shortening rule, and verify the formula computationally in Macaulay2."
   arxiv: "2606.08120"
