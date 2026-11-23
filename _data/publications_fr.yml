@@ -1,7 +1,7 @@
 - id: one-step-smoothability
-  title: "Smoothability of the one-step loci with Hilbert functions (1,5,6) and (1,5,7)"
-  venue: arXiv, 2026
-  description: "Nous démontrons que les lieux one-step de fonctions de Hilbert (1,5,6) et (1,5,7) sont lissables en dimension de plongement cinq. La preuve utilise la famille lissable de régularité deux d'Erman-Velasco et un test de rang différentiel sur un corps fini, plaçant ces cas exceptionnels du problème de Shafarevich du côté lissable."
+  title: "The one-step Shafarevich gap in embedding dimension five"
+  venue: arXiv, 2026 (v2)
+  description: "Nous résolvons le problème de Shafarevich pour les lieux one-step en dimension de plongement cinq sur un corps algébriquement clos de caractéristique zéro. Les lieux de fonction de Hilbert (1,5,r) sont contenus dans la composante lissable pour tout r autre que 3 et 5, ces deux cas étant précisément ceux des composantes élémentaires génériquement réduites."
   arxiv: "2606.22368"
   image: one-step-smoothability-minimal.svg
   authors:
