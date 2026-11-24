@@ -18,7 +18,7 @@ p { margin: 0 0 16px; }
 .site-nav [aria-current="page"] { color: #000; text-decoration: none; }
 .intro { display: flex; align-items: flex-start; gap: 32px; }
 .intro > div { flex: 1; }
-.portrait { width: 180px; height: 180px; object-fit: cover; object-position: 65% center; }
+.portrait { width: 180px; height: 180px; object-fit: cover; object-position: center 55%; }
 section { margin-top: 24px; }
 .publications { padding-left: 24px; margin: 0 0 12px; }
 .publications li { margin-bottom: 10px; }
