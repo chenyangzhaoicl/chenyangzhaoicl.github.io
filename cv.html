@@ -61,6 +61,15 @@ layout: null
           {% endfor %}
         </ul>
       </section>
+      <section aria-labelledby="talks">
+        <h2 id="talks">Talks</h2>
+        <ul class="publications">
+          {% for talk in site.data.talks limit:2 %}
+          <li><em>{{ talk.title | escape }}</em><br>
+            <span class="meta">{{ talk.date }} · {% if talk.link %}<a href="{{ talk.link }}">{{ talk.venue }}</a>{% else %}{{ talk.venue }}{% endif %} · {{ talk.location }}</span></li>
+          {% endfor %}
+        </ul>
+      </section>
     </main>
   </div>
 </body>
